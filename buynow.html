@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now - ShreeJee Ayucare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-green-900 text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="logo.webp" alt="ShreeJee Ayucare Logo" class="h-10 w-10 rounded-full shadow-md">
+        <span class="text-white font-bold text-xl">ShreeJee Ayucare</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 p-6 mt-6">
+    
+    <!-- Left Side -->
+    <div class="lg:col-span-2 space-y-6">
+      
+      <!-- Delivery -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold mb-4 text-green-700">Delivery</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" id="firstName" placeholder="First name" class="border rounded-md p-3" required>
+          <input type="text" id="lastName" placeholder="Last name" class="border rounded-md p-3" required>
+        </div>
+        <input type="text" id="address" placeholder="Address" class="w-full border rounded-md p-3 mt-4" required>
+        <input type="text" id="apartment" placeholder="Apartment, suite, etc. (optional)" 
+       class="w-full border rounded-md p-3 mt-4">
+
+        
+        <div class="grid grid-cols-3 gap-4 mt-4">
+          <input type="text" id="city" placeholder="City" class="border rounded-md p-3" required>
+          <select id="state" class="border rounded-md p-3" required>
+            <option value="">-- Select State / UT --</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Ladakh">Ladakh</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
+          </select>
+          <div>
+            <input type="text" id="pincode" placeholder="PIN code" maxlength="6" class="border rounded-md p-3 w-full" required>
+            <p id="pincode-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+        </div>
+
+        <input type="text" id="phone" placeholder="Phone (Required)" class="w-full border rounded-md p-3 mt-4" required>
+        <input type="text" id="altPhone" placeholder="Alternate Phone (Optional)" class="w-full border rounded-md p-3 mt-4">
+      </div>
+
+      <!-- Payment -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold mb-4 text-green-700">Payment</h2>
+        <p class="text-sm text-gray-500 mb-4">All transactions are secure and encrypted.</p>
+
+        <div class="space-y-3">
+          <label class="flex items-center border p-3 rounded-md cursor-pointer">
+            <input type="radio" name="payment" value="cashfree" class="mr-3">
+            <span>Cashfree Payments (UPI, Cards, Wallets, NetBanking)</span>
+          </label>
+          <label class="flex items-center border p-3 rounded-md cursor-pointer bg-yellow-100">
+            <input type="radio" name="payment" value="cod" checked class="mr-3">
+            <span>Cash on Delivery (COD)</span>
+          </label>
+        </div>
+
+        <button id="order-btn" class="mt-6 w-full bg-green-900 text-white py-3 rounded-md font-semibold">Complete Order</button>
+      </div>
+    </div>
+
+    <!-- Right Side: Order Summary -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+      <h2 class="text-lg font-semibold mb-4 text-green-700">Order Summary</h2>
+      
+      <!-- Product -->
+      <div class="flex items-center mb-4">
+        <img src="paachanpro.webp" alt="Product" class="w-16 h-16 object-contain border rounded-md mr-4">
+        <div>
+          <p class="font-semibold">Diacare Powder - 300G</p>
+          <p class="text-gray-600">₹1200.00</p>
+        </div>
+      </div>
+
+      <!-- Quantity Control -->
+      <div class="flex items-center mb-4">
+        <button id="decreaseQty" class="px-3 py-1 bg-gray-200 rounded-l">-</button>
+        <input type="text" id="quantity" value="1" readonly class="w-12 text-center border-t border-b">
+        <button id="increaseQty" class="px-3 py-1 bg-gray-200 rounded-r">+</button>
+      </div>
+
+      <!-- Discount Code -->
+      <div class="flex mb-2">
+        <input type="text" id="discountCode" placeholder="Discount code" class="border rounded-l-md p-2 flex-grow">
+        <button id="applyDiscount" class="bg-gray-200 px-4 rounded-r-md">Apply</button>
+      </div>
+      <p id="discountMessage" class="text-green-600 text-sm mb-4"></p>
+
+      <!-- Summary -->
+      <div id="summary" class="text-gray-700">
+        <div class="flex justify-between mb-2">
+          <span>Subtotal</span>
+          <span id="subtotal">₹1200.00</span>
+        </div>
+        <div class="flex justify-between mb-2">
+          <span>Discount</span>
+          <span id="discount">₹0.00</span>
+        </div>
+        <div class="flex justify-between mb-2">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+        <div class="flex justify-between mb-1">
+          <span>Tax Included</span>
+          <span id="tax">₹108.18</span>
+        </div>
+        <div class="flex justify-between font-semibold text-lg">
+          <span>Total</span>
+          <span id="total">INR ₹1200.00</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyB1wbJonjyJQDrPJWbMCVBtRolJH4HDskU",
+      authDomain: "shreejee-ayucare.firebaseapp.com",
+      databaseURL: "https://shreejee-ayucare-default-rtdb.firebaseio.com",
+      projectId: "shreejee-ayucare",
+      storageBucket: "shreejee-ayucare.firebasestorage.app",
+      messagingSenderId: "247248655859",
+      appId: "1:247248655859:web:b09bfc30ff6953aad42e86",
+      measurementId: "G-3ZCF4H1QPP"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Pincode Auto-fill (City + State)
+    document.getElementById("pincode").addEventListener("blur", function() {
+      const pincode = this.value.trim();
+      const errorEl = document.getElementById("pincode-error");
+
+      if (/^[0-9]{6}$/.test(pincode)) {
+        fetch(`https://api.postalpincode.in/pincode/${pincode}`)
+          .then(res => res.json())
+          .then(data => {
+            if (Array.isArray(data) && data[0]?.Status === "Success") {
+              const office = data[0].PostOffice[0];
+              document.getElementById("city").value = office.District || ""; // editable by user
+              document.getElementById("state").value = office.State || "";
+              errorEl.textContent = "";
+            } else {
+              errorEl.textContent = "❌ This pincode does not exist in India.";
+              document.getElementById("city").value = "";
+              document.getElementById("state").value = "";
+            }
+          })
+          .catch(() => {
+            errorEl.textContent = "⚠️ Error fetching pincode details.";
+          });
+      } else {
+        errorEl.textContent = "⚠️ Please enter a valid 6-digit pincode.";
+        document.getElementById("city").value = "";
+        document.getElementById("state").value = "";
+      }
+    });
+
+    const pricePerUnit = 1200;
+    let quantity = 1;
+    let discountValue = 0;
+    let appliedCode = "";
+
+    // ✅ Define multiple discount codes
+    const discountCodes = {
+      "SAVE100": 100,
+      "KARTIKEY100": 100,
+      "KARISHMA100": 100,
+      "RITU100" : 100
+    };
+
+    function updateSummary() {
+      const subtotal = pricePerUnit * quantity;
+      const tax = subtotal * 0.075; // 18% approx tax calculation (adjust as needed)
+      const total = subtotal - discountValue;
+      document.getElementById("subtotal").textContent = `₹${subtotal.toFixed(2)}`;
+      document.getElementById("discount").textContent = `₹${discountValue.toFixed(2)}`;
+      document.getElementById("tax").textContent = `₹${tax.toFixed(2)}`;
+      document.getElementById("total").textContent = `INR ₹${total.toFixed(2)}`;
+    }
+
+    // Quantity buttons
+    document.getElementById("increaseQty").addEventListener("click", () => {
+      quantity++;
+      document.getElementById("quantity").value = quantity;
+      updateSummary();
+    });
+
+    document.getElementById("decreaseQty").addEventListener("click", () => {
+      if (quantity > 1) {
+        quantity--;
+        document.getElementById("quantity").value = quantity;
+        updateSummary();
+      }
+    });
+
+    // Discount Code
+    document.getElementById("applyDiscount").addEventListener("click", () => {
+      const code = document.getElementById("discountCode").value.trim().toUpperCase();
+      const msgEl = document.getElementById("discountMessage");
+      if (discountCodes[code]) {
+        discountValue = discountCodes[code];
+        appliedCode = code;
+        msgEl.textContent = `🎉 Hurray! You saved ₹${discountValue} with code ${code}.`;
+      } else {
+        discountValue = 0;
+        appliedCode = "";
+        msgEl.textContent = "❌ Invalid discount code.";
+      }
+      updateSummary();
+    });
+
+    // Cashfree disable
+    const cashfreeRadio = document.querySelector('input[value="cashfree"]');
+    const codRadio = document.querySelector('input[value="cod"]');
+    cashfreeRadio.addEventListener("change", function () {
+      alert("❌ This service is not available at the moment, please choose COD.");
+      codRadio.checked = true;
+      cashfreeRadio.checked = false;
+    });
+
+    // Save order
+    document.getElementById("order-btn").addEventListener("click", function () {
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const apartment = document.getElementById("apartment").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const state = document.getElementById("state").value.trim();
+      const pincode = document.getElementById("pincode").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const altPhone = document.getElementById("altPhone").value.trim();
+      const subtotal = pricePerUnit * quantity;
+      const tax = subtotal * 0.1183;
+      const totalPrice = subtotal - discountValue;
+
+      if (!firstName || !lastName || !address || !city || !state || !pincode || !phone) {
+        alert("⚠️ Please fill all mandatory fields.");
+        return;
+      }
+
+      if (!/^[6-9]\d{9}$/.test(phone)) {
+        alert("❌ Please enter a valid 10-digit Indian phone number.");
+        return;
+      }
+
+      db.ref("orders").push({
+        firstName, lastName, address,apartment, city, state, pincode, phone, altPhone,
+        quantity,
+        discount: discountValue,
+        promoCode: appliedCode,
+        subtotal,
+        tax: tax.toFixed(2),
+        total: totalPrice,
+        payment: "COD",
+        timestamp: Date.now()
+      })
+      .then(() => {
+        window.location.href = "order-success.html";
+      })
+      .catch(err => {
+        console.error("❌ Firebase error:", err);
+        alert("⚠️ Error saving order: " + err.message);
+      });
+    });
+
+    // Initial load
+    updateSummary();
+  </script>
+</body>
+</html>

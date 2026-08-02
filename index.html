@@ -1,0 +1,3066 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="/favicon.ico" rel="icon"/>
+<link href="/favicon.ico" rel="apple-touch-icon"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Diacare Powder by ShreeJee, a natural, plant-based solution to support healthy blood sugar levels with no side effects." name="description"/>
+<meta content="Diacare Powder, natural diabetes remedy, blood sugar support, shreejee" name="keywords"/>
+<meta content="ShreeJee" name="author"/>
+<title>Diacare Powder | ShreeJee </title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '702458476165152');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=702458476165152&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Meta Pixel Code -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Noto+Serif+Devanagari&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .bg-hero {
+      background-image: url('hero.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .parallax {
+      background-position: center calc(50% + 20px);
+      transition: background-position 0.1s ease-out;
+    }
+    #mainNav {
+    background-color: #14532d !important; /* green-900 */
+    } 
+    .hover-scale {
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .hover-bounce:hover {
+      animation: bounce 0.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    .slide-in {
+      animation: slideIn 0.8s ease-out;
+    }
+    .bounce-in {
+      animation: bounceIn 1.2s ease-out;
+    }
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.3s; }
+    .stagger-3 { animation-delay: 0.5s; }
+    .carousel-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(90deg, rgba(67, 56, 202, 0.9), rgba(108, 99, 255, 0.9));
+      padding: 0.5rem 0;
+      transition: background 0.3s ease;
+    }
+    .sticky-nav.scrolled {
+      background: linear-gradient(90deg, rgba(67, 56, 202, 1), rgba(108, 99, 255, 1));
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nav-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 0.25rem 0.75rem;
+      transition: all 0.3s ease;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.25rem 0.5rem;
+      display: block;
+      border-radius: 5px;
+      font-size: 0.875rem;
+    }
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgba(67, 56, 202, 0.9);
+      padding: 1rem;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .mobile-menu.active {
+      display: flex;
+    }
+    .hamburger {
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+    .hindi-text {
+      font-family: 'Noto Serif Devanagari', serif;
+    }
+    .faq-section {
+      max-width: 6xl;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    details {
+      margin-bottom: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      overflow: hidden;
+    }
+    summary {
+      padding: 1rem;
+      background-color: #f3f4f6;
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+    summary:hover {
+      background-color: #e5e7eb;
+    }
+    summary::after {
+      content: '+';
+      position: absolute;
+      right: 1rem;
+      transition: transform 0.3s ease, content 0.3s ease;
+    }
+    details[open] summary::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+    details > div {
+      padding: 1rem;
+      background-color: #fff;
+      border-top: 1px solid #e5e7eb;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+    details[open] > div {
+      max-height: 200px;
+      padding: 1rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+    }
+    .modal-image {
+      flex: 1;
+      min-width: 150px;
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .modal-text {
+      flex: 2;
+      padding: 10px;
+    }
+    .modal-text h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #4b1e9e;
+      margin-bottom: 10px;
+    }
+    .modal-text p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .modal-form {
+      width: 100%;
+    }
+    .modal-form div {
+      margin-bottom: 10px;
+    }
+    .modal-form label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .modal-form input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 5px;
+    }
+    .modal-form button {
+      width: 100%;
+      padding: 8px;
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+    .modal-form button:hover {
+      background-color: #2e8b57;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+    .close-btn:hover {
+      color: #026417;
+    }
+    @media (max-width: 767px) {
+      .hamburger {
+        display: block;
+      }
+      .sticky-nav .nav-links {
+        display: none;
+      }
+      .sticky-nav.scrolled .nav-links {
+        display: none;
+      }
+      .bg-hero {
+        background-size: cover;
+        background-attachment: scroll;
+        min-height: 70vh;
+      }
+      .modal-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .modal-image {
+        margin: 0 auto;
+      }
+      /* Button adjustments for mobile */
+      .hero-button, .form-button {
+        font-size: 0.9rem !important;
+        padding: 0.5rem 1rem !important;
+        width: auto !important;
+        display: inline-block !important;
+        white-space: normal !important;
+      }
+      .hero-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        width: auto;
+        display: inline-block;
+        white-space: normal;
+      }
+      .form-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .bg-hero {
+        background-size: cover;
+        min-height: 80vh;
+      }
+    }
+    @media (min-width: 1025px) {
+      .bg-hero {
+        background-size: cover;
+        min-height: 100vh;
+      }
+    }
+    .error {
+      border-color: #ef4444;
+      color: #ef4444;
+    }
+    .success {
+      color: #10b981;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    /* Custom classes for buttons */
+    .hero-button {
+      background-color: #2e8b57;
+      color: white;
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      transition: background-color 0.3s ease;
+    }
+    .hero-button:hover {
+      background-color: #0e9a6e;
+    }
+    .form-button {
+      background-color: #2e8b57;
+      color: white;
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    .form-button:hover {
+      background-color: #026417;
+    }
+  
+
+
+
+/* 🔥 Review Infinite Scroll */
+.review-marquee { overflow: hidden; width: 100%; }
+.review-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollReviews 25s linear infinite;
+}
+@keyframes scrollReviews {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.review-card {
+  min-width: 320px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.35s ease;
+}
+.review-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.review-stars { color: #facc15; font-size: 18px; }
+
+
+/* Premium Popup Modal */
+.premium-modal{
+background: linear-gradient(135deg,#064e3b,#166534,#14532d);
+border: 1px solid rgba(255,255,255,0.12);
+border-radius: 36px;
+padding: 0;
+overflow: hidden;
+max-width: 1100px;
+width: 95%;
+display:flex;
+box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+.premium-modal-left{
+flex:1;
+padding:50px;
+color:white;
+position:relative;
+}
+
+.premium-modal-left h3{
+font-size:52px;
+line-height:1.1;
+font-weight:800;
+color:white;
+margin:20px 0;
+}
+
+.premium-modal-left h3 span{
+color:#86efac;
+}
+
+.premium-modal-left p{
+color:#dcfce7;
+font-size:18px;
+line-height:1.7;
+}
+
+.premium-badge{
+display:inline-block;
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.15);
+padding:10px 18px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+letter-spacing:0.5px;
+}
+
+.premium-points{
+margin-top:35px;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.premium-points div{
+background:rgba(255,255,255,0.08);
+padding:18px;
+border-radius:20px;
+font-weight:600;
+}
+
+
+.premium-modal-right{
+flex:1;
+padding:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.premium-form-card{
+width:100%;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:32px;
+border:1px solid rgba(255,255,255,0.12);
+}
+
+.premium-form-head h4{
+font-size:36px;
+font-weight:800;
+color:white;
+margin-bottom:10px;
+}
+
+.premium-form-head p{
+color:#dcfce7;
+margin-bottom:30px;
+}
+
+.premium-form-card label{
+display:block;
+margin-bottom:10px;
+font-weight:700;
+color:white;
+}
+
+.premium-form-card input{
+width:100%;
+padding:16px 18px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.08);
+color:white;
+outline:none;
+}
+
+.premium-form-card input::placeholder{
+color:#d1fae5;
+}
+
+.premium-mini-badges{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.premium-mini-badges span{
+background:rgba(255,255,255,0.08);
+padding:10px 14px;
+border-radius:14px;
+font-size:13px;
+color:white;
+}
+
+.premium-form-card button{
+width:100%;
+background:white;
+color:#14532d;
+font-weight:800;
+padding:18px;
+border:none;
+border-radius:18px;
+font-size:18px;
+}
+
+.premium-form-card button:hover{
+transform:translateY(-2px) scale(1.01);
+}
+
+@media(max-width:768px){
+.premium-modal{
+flex-direction:column;
+}
+
+.premium-modal-left,
+.premium-modal-right{
+padding:28px;
+}
+
+.premium-modal-left h3{
+font-size:38px;
+}
+
+.premium-form-card{
+padding:24px;
+}
+}
+
+</style>
+<style>
+/* Desktop layout fix */
+@media (min-width: 768px) {
+  #consultationModal .modal-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px; /* Wider modal on desktop */
+  }
+
+  #consultationModal video {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  #consultationModal .form-section {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* Mobile keeps stacking layout */
+@media (max-width: 767px) {
+  #consultationModal .modal-content {
+    flex-direction: column;
+    max-width: 95%;
+  }
+}
+</style>
+<script src="https://cdn.tailwindcss.com"></script><style>
+/* Premium Light Green Ayurvedic Theme Overrides */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4fdf8;
+  color: #1a1a1a;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #3cb371; /* Premium light green */
+  font-weight: 700;
+}
+button, .btn, input[type=submit] {
+  background-color: #3cb371;
+  color: white;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+button:hover, .btn:hover, input[type=submit]:hover {
+  background-color: #2e8b57; /* darker hover green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+a {
+  color: #3cb371;
+}
+a:hover {
+  color: #2e8b57;
+}
+</style>
+<style id="ultimate-mobile-fix">
+/* ===== HERO FIX ===== */
+#hero{
+position:relative;
+width:100%;
+overflow:hidden;
+}
+
+#heroSlider{
+display:flex;
+width:100%;
+height:100%;
+}
+
+.hero-slide{
+min-width:100%;
+position:relative;
+}
+
+.hero-slide picture,
+.hero-slide img{
+display:block;
+width:100%;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* HERO SECTION */
+  #hero{
+    height:auto !important;
+    min-height:auto !important;
+    background:#fff;
+  }
+
+  #heroSlider{
+    position:relative !important;
+    height:auto !important;
+  }
+
+  .hero-slide{
+    height:auto !important;
+  }
+
+  .hero-image{
+    width:100% !important;
+    height:auto !important;
+    object-fit:contain !important;
+    object-position:center top !important;
+  }
+
+  /* POPUP MODAL */
+  #consultationModal{
+    padding:0 !important;
+    align-items:flex-end !important;
+    overflow-y:auto !important;
+  }
+
+  #consultationModal .premium-modal{
+    width:100% !important;
+    max-width:100% !important;
+    border-radius:28px 28px 0 0 !important;
+    overflow:hidden !important;
+    display:block !important;
+    max-height:92vh !important;
+    overflow-y:auto !important;
+  }
+
+  /* Hide left side on mobile */
+  #consultationModal .premium-modal-left{
+    display:none !important;
+  }
+
+  #consultationModal .premium-modal-right{
+    width:100% !important;
+    padding:22px !important;
+  }
+
+  #consultationModal .premium-form-card{
+    padding:0 !important;
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+  }
+
+  #consultationModal .premium-form-head h4{
+    font-size:30px !important;
+    text-align:center !important;
+    line-height:1.2 !important;
+  }
+
+  #consultationModal .premium-form-head p{
+    text-align:center !important;
+    font-size:14px !important;
+  }
+
+  #consultationModal input{
+    font-size:16px !important;
+    padding:15px !important;
+  }
+
+  #consultationModal button{
+    font-size:16px !important;
+    padding:16px !important;
+  }
+
+  #consultationModal .premium-mini-badges{
+    display:none !important;
+  }
+
+  #consultationModal .close-btn{
+    position:absolute !important;
+    top:14px !important;
+    right:14px !important;
+    width:42px !important;
+    height:42px !important;
+    border-radius:50% !important;
+    background:#fff !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    z-index:1000 !important;
+    color:#14532d !important;
+    font-size:28px !important;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+  }
+
+}
+</style>
+<style id="mobile-section-optimizations">
+@media (max-width:768px){
+
+  /* GLOBAL SECTION SPACING */
+  section{
+    padding-top:48px !important;
+    padding-bottom:48px !important;
+  }
+
+  /* HEADINGS */
+  h2{
+    font-size:2rem !important;
+    line-height:1.2 !important;
+  }
+
+  p{
+    line-height:1.5 !important;
+  }
+
+  /* WELLNESS STORE */
+  .wellness-slider-wrapper{
+    padding-left:8px !important;
+    padding-right:8px !important;
+  }
+
+  .wellness-slider > div > div{
+    max-width:280px !important;
+    border-radius:18px !important;
+  }
+
+  .wellness-slider img{
+    height:220px !important;
+  }
+
+  .wellness-slider h3{
+    font-size:15px !important;
+    line-height:1.4 !important;
+  }
+
+  /* REAL CUSTOMER REVIEWS */
+  .review-card{
+    min-width:260px !important;
+    padding:16px !important;
+    border-radius:18px !important;
+  }
+
+  .review-track{
+    gap:14px !important;
+    animation-duration:16s !important;
+  }
+
+  /* FREE CONSULTATION SECTION */
+  #lead-form .grid{
+    gap:36px !important;
+  }
+
+  #lead-form h2{
+    font-size:2.3rem !important;
+    line-height:1.15 !important;
+    margin-bottom:20px !important;
+  }
+
+  #lead-form p{
+    font-size:15px !important;
+  }
+
+  #lead-form .flex.items-start{
+    padding:16px !important;
+    border-radius:22px !important;
+  }
+
+  #lead-form .w-14{
+    width:48px !important;
+    height:48px !important;
+    font-size:20px !important;
+  }
+
+  #lead-form .text-xl{
+    font-size:16px !important;
+  }
+
+  #lead-form .rounded-\[40px\]{
+    border-radius:28px !important;
+    padding:24px !important;
+  }
+
+  #lead-form h3{
+    font-size:2rem !important;
+    line-height:1.2 !important;
+  }
+
+  #lead-form input{
+    padding:14px !important;
+    font-size:15px !important;
+  }
+
+  #lead-form button{
+    padding:14px !important;
+    font-size:16px !important;
+  }
+
+  /* YOUR WELLNESS STORY SECTION */
+  #live-reviews{
+    padding-top:56px !important;
+    padding-bottom:56px !important;
+  }
+
+  #live-reviews h2{
+    font-size:2.2rem !important;
+    line-height:1.2 !important;
+  }
+
+  #live-reviews p{
+    font-size:15px !important;
+  }
+
+  #live-reviews .grid{
+    gap:18px !important;
+  }
+
+  #live-reviews .rounded-\[32px\]{
+    padding:24px !important;
+    border-radius:24px !important;
+  }
+
+  #live-reviews .w-20{
+    width:58px !important;
+    height:58px !important;
+    font-size:28px !important;
+    border-radius:18px !important;
+    margin-bottom:18px !important;
+  }
+
+  #live-reviews h3{
+    font-size:1.5rem !important;
+    margin-bottom:10px !important;
+  }
+
+}
+</style>
+<style id="extra-mobile-compact-fixes">
+@media (max-width:768px){
+
+  /* REAL CUSTOMER REVIEWS SPEED */
+  .review-track{
+    animation-duration:10s !important;
+  }
+
+  /* CONSULTATION SECTION COMPACT */
+  #lead-form{
+    padding-top:38px !important;
+    padding-bottom:38px !important;
+  }
+
+  #lead-form .max-w-7xl{
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  #lead-form h2{
+    font-size:1.9rem !important;
+    line-height:1.12 !important;
+    margin-top:18px !important;
+    margin-bottom:14px !important;
+  }
+
+  #lead-form p{
+    font-size:14px !important;
+    margin-bottom:18px !important;
+  }
+
+  #lead-form .space-y-5{
+    margin-bottom:0 !important;
+  }
+
+  #lead-form .flex.items-start{
+    padding:12px !important;
+    gap:12px !important;
+  }
+
+  #lead-form .w-14{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+  }
+
+  #lead-form .text-xl{
+    font-size:15px !important;
+  }
+
+  #lead-form .rounded-\[40px\]{
+    padding:20px !important;
+    border-radius:24px !important;
+  }
+
+  #lead-form h3{
+    font-size:1.7rem !important;
+    margin-bottom:12px !important;
+  }
+
+  #lead-form input{
+    padding:12px !important;
+    border-radius:16px !important;
+  }
+
+  #lead-form button{
+    padding:12px !important;
+    border-radius:16px !important;
+  }
+
+  /* YOUR WELLNESS STORY SECTION COMPACT */
+  #live-reviews{
+    padding-top:40px !important;
+    padding-bottom:40px !important;
+  }
+
+  #live-reviews .mb-20{
+    margin-bottom:40px !important;
+  }
+
+  #live-reviews h2{
+    font-size:1.9rem !important;
+    line-height:1.15 !important;
+    margin-top:18px !important;
+  }
+
+  #live-reviews p{
+    font-size:14px !important;
+    margin-top:14px !important;
+  }
+
+  #live-reviews .grid{
+    gap:14px !important;
+  }
+
+  #live-reviews .rounded-\[32px\]{
+    padding:18px !important;
+    border-radius:20px !important;
+  }
+
+  #live-reviews .w-20{
+    width:50px !important;
+    height:50px !important;
+    font-size:22px !important;
+    margin-bottom:14px !important;
+  }
+
+  #live-reviews h3{
+    font-size:1.25rem !important;
+    margin-bottom:8px !important;
+  }
+
+}
+</style>
+
+<style id="chat-review-merge">
+.whatsapp-float{
+position:fixed;
+right:20px;
+bottom:20px;
+width:64px;height:64px;
+background:#25D366;color:#fff;
+border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+font-size:36px;text-decoration:none;
+box-shadow:0 8px 24px rgba(0,0,0,.28);
+z-index:99999;
+transition:.3s;
+}
+.whatsapp-float:hover{transform:scale(1.08);background:#1ebe5d;}
+@media(max-width:768px){
+.whatsapp-float{right:16px;bottom:16px;width:58px;height:58px;font-size:32px;}
+}
+.review-marquee{overflow:hidden;position:relative;width:100%;}
+.review-track{
+display:flex!important;
+width:max-content;
+animation:reviewLoop 30s linear infinite;
+}
+.review-track:hover{animation-play-state:paused;}
+.review-card{flex:0 0 340px;margin-right:20px;}
+@keyframes reviewLoop{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+@media(max-width:768px){
+.review-card{flex:0 0 280px;}
+.review-track{animation-duration:20s;}
+}
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<nav class="bg-green-900 text-white shadow-lg sticky top-0 z-50" id="mainNav">
+<div class="container mx-auto flex items-center justify-between px-4 py-3">
+<!-- Logo + Brand -->
+<div class="flex items-center gap-3">
+<img alt="ShreeJee Ayucare Logo" class="w-10 h-10 rounded-full object-cover" src="logo.webp"/>
+<div class="text-xl font-bold tracking-wide">
+        ShreeJee Ayucare
+      </div>
+</div>
+<!-- Hamburger Button (Mobile) -->
+<button class="block md:hidden text-white text-2xl focus:outline-none" id="menuToggle">
+      ☰
+    </button>
+<!-- Menu Links -->
+<div class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-green-900 md:bg-transparent z-50" id="navLinks">
+<a class="block px-4 py-2 hover:bg-green-800 md:hover:bg-transparent" href="index.html">Home</a>
+<a class="block px-4 py-2 hover:bg-green-800 md:hover:bg-transparent" href="med_details.html">Product Details</a>
+<a class="block px-4 py-2 hover:bg-green-800 md:hover:bg-transparent" href="#lead-form">Book Free Consultation</a>
+</div>
+</div>
+</nav>
+<script>
+  // Toggle mobile menu
+  document.getElementById("menuToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("hidden");
+  });
+</script>
+<!--
+MOBILE HERO IMAGES REQUIRED:
+
+Create these files for best mobile preview:
+- hero1-mobile.webp
+- hero2-mobile.webp
+- hero3-mobile.webp
+
+Recommended mobile size:
+1080x1350 or 1080x1440
+
+These mobile images will automatically load on phones.
+-->
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-black" id="hero">
+<!-- Slider -->
+<div class="relative flex transition-transform duration-500 ease-in-out touch-pan-y" id="heroSliderWrapper" style="transform: translateX(0%);">
+<div class="min-w-full hero-slide">
+<picture>
+<source media="(max-width:768px)" srcset="hero1-mobile.webp"/>
+<img class="hero-image w-full object-cover" src="hero1.webp"/>
+</picture>
+</div>
+<div class="min-w-full hero-slide">
+<picture>
+<source media="(max-width:768px)" srcset="hero2-mobile.webp"/>
+<img class="hero-image w-full object-cover" src="hero2.webp"/>
+</picture>
+</div>
+<div class="min-w-full hero-slide">
+<picture>
+<source media="(max-width:768px)" srcset="hero3-mobile.webp"/>
+<img class="hero-image w-full object-cover" src="hero3.webp"/>
+</picture>
+</div>
+</div>
+<!-- Premium Controls -->
+<div class="relative z-30 flex items-center justify-center gap-4 py-4 bg-white" id="heroControls">
+<button class="hero-nav-btn" id="heroPrevBtn">
+<span>‹</span>
+</button>
+<div class="hero-counter-box">
+<div class="hero-counter-text">
+<span id="heroCurrent">1</span>
+<span class="opacity-60">/</span>
+<span id="heroTotal">3</span>
+</div>
+<div class="hero-progress-bar">
+<div class="hero-progress-fill" id="heroProgress"></div>
+</div>
+</div>
+<button class="hero-nav-btn" id="heroNextBtn">
+<span>›</span>
+</button>
+</div>
+</section>
+<style>
+
+.hero-nav-btn{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 30px rgba(0,0,0,0.18);
+  transition:all 0.3s ease;
+}
+
+.hero-nav-btn span{
+  font-size:30px;
+  line-height:1;
+  color:#111;
+  margin-top:-4px;
+}
+
+.hero-nav-btn:hover{
+  transform:scale(1.08);
+  background:#fff;
+}
+
+.hero-counter-box{
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px);
+  padding:10px 16px;
+  border-radius:999px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.18);
+  min-width:120px;
+}
+
+.hero-counter-text{
+  font-size:24px;
+  font-weight:600;
+  line-height:1;
+  text-align:center;
+  color:#111;
+}
+
+.hero-progress-bar{
+  width:50px;
+  height:4px;
+  background:#d1d5db;
+  border-radius:999px;
+  margin:10px auto 0;
+  overflow:hidden;
+}
+
+.hero-progress-fill{
+  height:100%;
+  width:33.33%;
+  background:#111;
+  border-radius:999px;
+  transition:all 0.35s ease;
+}
+
+@media(max-width:768px){
+
+  #heroControls{
+    bottom:14px !important;
+    gap:14px !important;
+  }
+
+  .hero-nav-btn{
+    width:38px;
+    height:38px;
+  }
+
+  .hero-nav-btn span{
+    font-size:24px;
+  }
+
+  .hero-counter-box{
+    padding:8px 12px;
+    min-width:95px;
+  }
+
+  .hero-counter-text{
+    font-size:20px;
+  }
+
+  .hero-progress-bar{
+    width:54px;
+    margin-top:8px;
+  }
+
+}
+</style>
+<style>
+#hero{
+  position:relative;
+}
+
+#heroSliderWrapper{
+  width:100%;
+}
+
+.hero-slide{
+  min-width:100%;
+}
+
+.hero-image{
+  width:100%;
+  height:100vh;
+  object-fit:cover;
+  display:block;
+}
+
+@media(max-width:768px){
+  .hero-image{
+    height:auto;
+    min-height:auto;
+    object-fit:contain;
+  }
+
+  #hero .absolute.bottom-8{
+    bottom:18px;
+    transform:translateX(-50%) scale(0.9);
+  }
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const slider = document.getElementById("heroSliderWrapper");
+  const slides = document.querySelectorAll(".hero-slide");
+
+  const prevBtn = document.getElementById("heroPrevBtn");
+  const nextBtn = document.getElementById("heroNextBtn");
+
+  const currentEl = document.getElementById("heroCurrent");
+  const totalEl = document.getElementById("heroTotal");
+  const progress = document.getElementById("heroProgress");
+
+  let current = 0;
+  const total = slides.length;
+
+  totalEl.textContent = total;
+
+  function updateHeroSlider(){
+    slider.style.transform = `translateX(-${current * 100}%)`;
+    currentEl.textContent = current + 1;
+
+    const progressWidth = ((current + 1) / total) * 100;
+    progress.style.width = progressWidth + "%";
+  }
+
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % total;
+    updateHeroSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + total) % total;
+    updateHeroSlider();
+  });
+
+  // Touch Swipe
+  let startX = 0;
+  let endX = 0;
+
+  slider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive:true });
+
+  slider.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+  }, { passive:true });
+
+  slider.addEventListener("touchend", () => {
+
+    const diff = startX - endX;
+
+    if(Math.abs(diff) > 50){
+
+      if(diff > 0){
+        current = (current + 1) % total;
+      } else {
+        current = (current - 1 + total) % total;
+      }
+
+      updateHeroSlider();
+    }
+
+  });
+
+  // Auto Slide
+  setInterval(() => {
+    current = (current + 1) % total;
+    updateHeroSlider();
+  }, 5000);
+
+});
+</script>
+<!-- Benefits Section -->
+<section class="py-16 px-4 max-w-6xl mx-auto bg-green-50 relative" id="reviews">
+<div class="text-center mb-6">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+    🎥 CUSTOMER TRANSFORMATIONS
+    </span>
+<h2 class="text-4xl font-bold text-green-900 mt-5 mb-3 bounce-in">Real Wellness Video Stories</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">
+    Watch authentic customer experiences and wellness journeys with Diacare.
+    </p>
+</div>
+<div class="flex space-x-4 overflow-x-auto pb-4">
+<div class="bg-white p-4 rounded-xl shadow-lg min-w-[300px] flex-shrink-0 flex-shrink-0">
+<video class="w-full rounded-lg h-48 w-auto object-cover" controls="">
+<source src="review1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </source></video>
+<p class="mt-4 font-semibold text-#3cb371-700 text-center">– Poonam Sharma, 48 , Delhi</p>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-lg min-w-[300px] flex-shrink-0 flex-shrink-0">
+<video class="w-full rounded-lg h-48 w-auto object-cover" controls="">
+<source src="review2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </source></video>
+<p class="mt-4 font-semibold text-#3cb371-700 text-center">– Anil Gupta, 40 , Mumbai</p>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-lg min-w-[300px] flex-shrink-0 flex-shrink-0">
+<video class="w-full rounded-lg h-48 w-auto object-cover" controls="">
+<source src="review3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </source></video>
+<p class="mt-4 font-semibold text-#3cb371-700 text-center">– Sumit Kumar, 27 , Bihar</p>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-lg min-w-[300px] flex-shrink-0 flex-shrink-0">
+<video class="w-full rounded-lg h-48 w-auto object-cover" controls="">
+<source src="review4.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
+<p class="mt-4 font-semibold text-#3cb371-700 text-center">– Vikram Singh, 58 , Gujarat</p>
+</div>
+</div>
+<button aria-label="Next Video" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-#3cb371-600 hover:bg-#3cb371-700 text-white p-3 rounded-full shadow-lg transition duration-300 z-10" id="reviewsNextBtn">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</section><section class="py-12 bg-gray-50 relative" id="audio-reviews"><div class="text-center mb-3">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold inline-block mb-5">
+    🎧 REAL CUSTOMER FEEDBACK
+    </span>
+<h2 class="text-4xl font-bold text-center text-green-900 mb-5">Trusted Voice Testimonials</h2>
+<p class="text-gray-600">Hear what our customers say about our Diacare Powder Powder in their own voices.</p></div><div class="flex space-x-4 overflow-x-auto pb-4"><div class="bg-white p-4 rounded-lg shadow-md min-w-[300px] flex-shrink-0 text-center"><audio class="w-full" controls="True"><source src="audio1.mp3" type="audio/mpeg"/></audio><h3 class="text-lg font-semibold mt-2">Vinay Kumar</h3><p class="text-gray-600 text-sm">Age: 42 | Delhi</p></div><div class="bg-white p-4 rounded-lg shadow-md min-w-[300px] flex-shrink-0 text-center"><audio class="w-full" controls="True"><source src="audio2.mp3" type="audio/mpeg"/></audio><h3 class="text-lg font-semibold mt-2">Sunita Sharma</h3><p class="text-gray-600 text-sm">Age: 35 | Jaipur</p></div><div class="bg-white p-4 rounded-lg shadow-md min-w-[300px] flex-shrink-0 text-center"><audio class="w-full" controls="True"><source src="audio3.mp3" type="audio/mpeg"/></audio><h3 class="text-lg font-semibold mt-2">Vikram Singh</h3><p class="text-gray-600 text-sm">Age: 50 | Lucknow</p></div></div><button aria-label="Next Audio" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-#3cb371-600 hover:bg-#3cb371-700 text-white p-3 rounded-full shadow-lg transition duration-300 z-10" id="audioNextBtn">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Certified Ayurvedic Goodness Section -->
+<section class="py-16 bg-white text-center">
+<div class="text-center mb-10">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+    🌿 NATURAL QUALITY PROMISE
+    </span>
+<h2 class="text-4xl font-bold text-green-900 mt-5 mb-4">Certified Ayurvedic Goodness</h2>
+<p class="text-gray-600">
+    Premium herbal wellness backed by purity and trusted ingredients.
+    </p>
+</div>
+<div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8">
+<!-- Certificate 1 -->
+<div class="flex flex-col items-center">
+<img alt="Gluten-Free" class="w-24 h-24 object-contain mb-2" src="certificate1.webp"/>
+<p class="text-sm font-semibold text-gray-700">Gluten-Free</p>
+</div>
+<!-- Certificate 2 -->
+<div class="flex flex-col items-center">
+<img alt="100% Pure &amp; Vegan" class="w-24 h-24 object-contain mb-2" src="certificate2.webp"/>
+<p class="text-sm font-semibold text-gray-700">100% Pure &amp; Vegan</p>
+</div>
+<!-- Certificate 3 -->
+<div class="flex flex-col items-center">
+<img alt="Clinically Tested" class="w-24 h-24 object-contain mb-2" src="certificate3.webp"/>
+<p class="text-sm font-semibold text-gray-700">Clinically Tested</p>
+</div>
+<!-- Certificate 4 -->
+<div class="flex flex-col items-center">
+<img alt="GMO-Free" class="w-24 h-24 object-contain mb-2" src="certificate4.webp"/>
+<p class="text-sm font-semibold text-gray-700">GMO-Free</p>
+</div>
+</div>
+</section>
+<!-- Customer Image Review Section -->
+<section class="py-16 bg-green-50">
+<div class="text-center mb-8">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+    📸 CUSTOMER EXPERIENCES
+    </span>
+<h2 class="text-4xl font-bold text-green-900 mt-5 mb-3">Wellness Journeys Shared By Customers</h2>
+<p class="text-gray-600">
+    Genuine customer stories and trusted wellness experiences.
+    </p>
+</div>
+<div class="relative max-w-5xl mx-auto overflow-hidden">
+<!-- Carousel Container -->
+<div class="flex transition-transform duration-500 ease-in-out" id="imageReviewTrack">
+<!-- Review Items -->
+<div class="flex-shrink-0 w-1/2 px-4">
+<img alt="Customer Review 1" class="rounded-lg shadow-lg w-full h-auto transform hover:scale-105 transition duration-300" src="review1.webp"/>
+</div>
+<div class="flex-shrink-0 w-1/2 px-4">
+<img alt="Customer Review 2" class="rounded-lg shadow-lg w-full h-auto transform hover:scale-105 transition duration-300" src="review2.webp"/>
+</div>
+<div class="flex-shrink-0 w-1/2 px-4">
+<img alt="Customer Review 3" class="rounded-lg shadow-lg w-full h-auto transform hover:scale-105 transition duration-300" src="review3.webp"/>
+</div>
+<div class="flex-shrink-0 w-1/2 px-4">
+<img alt="Customer Review 4" class="rounded-lg shadow-lg w-full h-auto transform hover:scale-105 transition duration-300" src="review4.webp"/>
+</div>
+<div class="flex-shrink-0 w-1/2 px-4">
+<img alt="Customer Review 4" class="rounded-lg shadow-lg w-full h-auto transform hover:scale-105 transition duration-300" src="review5.webp"/>
+</div>
+<div class="flex-shrink-0 w-1/2 px-4">
+<img alt="Customer Review 4" class="rounded-lg shadow-lg w-full h-auto transform hover:scale-105 transition duration-300" src="review6.webp"/>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex justify-center items-center mt-6 space-x-6">
+<button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow-md transition duration-300" id="prevImageReview">‹</button>
+<span class="text-lg font-semibold text-green-800" id="imageReviewCounter">1 / 2</span>
+<button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow-md transition duration-300" id="nextImageReview">›</button>
+</div>
+</div>
+</section>
+<!-- Order Now Section -->
+<section class="py-16 bg-white">
+<div class="text-center mb-8">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+    🛍 PREMIUM AYURVEDIC PRODUCTS
+    </span>
+<h2 class="text-4xl font-bold text-green-900 mt-5 mb-4">Explore Our Wellness Store</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">
+    Discover natural Ayurvedic wellness products crafted for healthier living.
+    </p>
+</div>
+<!-- Countdown Timer -->
+<div class="text-center mb-8">
+<p class="text-lg font-semibold text-gray-700">⏳ Hurry! Offer ends in:</p>
+<span class="text-2xl font-bold text-red-600" id="countdown"></span>
+</div>
+<!-- MOBILE WELLNESS STORE SLIDER -->
+<style>
+@media (max-width:768px){
+
+  .wellness-slider-wrapper{
+    position:relative;
+    overflow:hidden;
+    padding:0 16px;
+  }
+
+  .wellness-slider{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:0 !important;
+    transition:transform 0.45s ease;
+  }
+
+  .wellness-slider{
+    padding-left:0 !important;
+  }
+
+  .wellness-slider > div{
+    min-width:100% !important;
+    max-width:100% !important;
+    flex:0 0 100% !important;
+    padding:0 14px !important;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .wellness-slider > div > div{
+    width:100%;
+    max-width:320px;
+    margin:0 auto;
+  }
+
+  .wellness-nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-top:22px;
+  }
+
+  .wellness-nav-btn{
+    width:40px;
+    height:40px;
+    border-radius:999px;
+    background:#ffffff;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    color:#111827;
+    border:none;
+  }
+
+  .wellness-counter{
+    background:#fff;
+    padding:8px 14px;
+    border-radius:999px;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+  }
+}
+
+@media (min-width:769px){
+  .wellness-nav{
+    display:none;
+  }
+}
+</style>
+<div class="wellness-slider-wrapper mx-auto max-w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4 wellness-slider" id="wellnessSlider">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition">
+<div class="overflow-hidden">
+<img alt="Paachan Pro" class="w-full h-64 object-contain transform transition duration-300 hover:scale-105" src="paachanpro.webp"/>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-800 mb-2">Diacare Powder| Ayurvedic Blend For Sugar Care &amp; Health</h3>
+<p class="text-gray-600 mb-2">
+<span class="line-through">Rs. 2,000.00</span>
+<span class="text-green-700 font-bold"> Rs. 1200.00</span>
+</p>
+<a class="block w-full text-center border-2 border-green-600 text-green-600 py-2 rounded-lg hover:bg-green-600 hover:text-white transition" href="buynow.html">
+           Add to Cart
+        </a>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition opacity-75">
+<div class="overflow-hidden">
+<img alt="PilesX Pro" class="w-full h-64 object-contain transform transition duration-300 hover:scale-105" src="pilescurex.webp"/>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-800 mb-2">PilesX Powder | Get Relief From Piles Using 100% Naturally Herbs</h3>
+<p class="text-gray-600 mb-2">
+<span class="line-through">Rs. 2,300.00</span>
+<span class="text-green-700 font-bold"> Rs. 1,600.00</span>
+</p>
+<div class="block w-full text-center bg-gray-400 text-white py-2 rounded-lg cursor-not-allowed">Out of Stock</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition opacity-75">
+<div class="overflow-hidden">
+<img alt="GasX Pro" class="w-full h-64 object-contain transform transition duration-300 hover:scale-105" src="diacurex.webp"/>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-800 mb-2">GasX Pro Powder – Natural Solution for Gas &amp; Indigestion</h3>
+<p class="text-gray-600 mb-2">
+<span class="line-through">Rs. 1,700.00</span>
+<span class="text-green-700 font-bold"> Rs. 1,499.00</span>`
+        </p>
+<div class="block w-full text-center bg-gray-400 text-white py-2 rounded-lg cursor-not-allowed">Out of Stock</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition opacity-75">
+<div class="overflow-hidden">
+<img alt="JointX Pro" class="w-full h-64 object-contain transform transition duration-300 hover:scale-105" src="arthocalm.webp"/>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-800 mb-2">JointX Powder – Natural Supplement for Joint Comfort</h3>
+<p class="text-gray-600 mb-2">
+<span class="text-green-700 font-bold"> Rs. 3,400.00</span>
+</p>
+<div class="block w-full text-center bg-gray-400 text-white py-2 rounded-lg cursor-not-allowed">Out of Stock</div>
+</div>
+</div>
+</div>
+<div class="wellness-nav">
+<button class="wellness-nav-btn" id="wellnessPrevBtn">‹</button>
+<div class="wellness-counter">
+<span id="wellnessCurrent">1</span>
+    /
+    <span id="wellnessTotal">4</span>
+</div>
+<button class="wellness-nav-btn" id="wellnessNextBtn">›</button>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  if(window.innerWidth > 768) return;
+
+  const slider = document.getElementById("wellnessSlider");
+  const slides = slider.children;
+
+  const prevBtn = document.getElementById("wellnessPrevBtn");
+  const nextBtn = document.getElementById("wellnessNextBtn");
+
+  const currentEl = document.getElementById("wellnessCurrent");
+  const totalEl = document.getElementById("wellnessTotal");
+
+  let current = 0;
+  const total = slides.length;
+
+  totalEl.textContent = total;
+
+  function updateWellnessSlider(){
+    slider.style.transform = `translateX(-${current * 100}%)`;
+    currentEl.textContent = current + 1;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % total;
+    updateWellnessSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + total) % total;
+    updateWellnessSlider();
+  });
+
+  let startX = 0;
+  let endX = 0;
+
+  slider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive:true });
+
+  slider.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+  }, { passive:true });
+
+  slider.addEventListener("touchend", () => {
+
+    const diff = startX - endX;
+
+    if(Math.abs(diff) > 50){
+
+      if(diff > 0){
+        current = (current + 1) % total;
+      } else {
+        current = (current - 1 + total) % total;
+      }
+
+      updateWellnessSlider();
+    }
+
+  });
+
+});
+</script>
+<section class="py-20 bg-gradient-to-b from-green-50 to-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-80 h-80 bg-green-200 opacity-20 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 relative z-10">
+<div class="text-center mb-14">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+⭐ VERIFIED CUSTOMER FEEDBACK
+</span>
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-4">
+Real Customer <span class="text-green-600">Reviews</span>
+</h2>
+<p class="text-gray-600 text-lg max-w-2xl mx-auto">
+Thousands of happy customers trust Diacare for their wellness journey.
+</p>
+</div>
+<div class="review-marquee max-w-7xl mx-auto mt-20 relative z-10">
+<div class="review-track" id="reviewsContainer"></div>
+</div>
+</div>
+</section>
+</section>
+<script>
+  function startCountdown() {
+    const countdownEl = document.getElementById("countdown");
+    const now = Date.now();
+
+    // Check if we already have a saved end time
+    let endTime = localStorage.getItem("offerEndTime");
+
+    // If no end time or it's expired, generate a new random one
+    if (!endTime || now > parseInt(endTime)) {
+      let randomMinutes = Math.floor(Math.random() * (60 - 20 + 1)) + 20; // 20-60 min
+      endTime = now + randomMinutes * 60 * 1000; // convert minutes to ms
+      localStorage.setItem("offerEndTime", endTime);
+    }
+
+    function updateTimer() {
+      const now = Date.now();
+      let timeLeft = parseInt(endTime) - now;
+
+      if (timeLeft <= 0) {
+        // Timer expired → reset with new random time
+        let randomMinutes = Math.floor(Math.random() * (60 - 20 + 1)) + 20;
+        endTime = now + randomMinutes * 60 * 1000;
+        localStorage.setItem("offerEndTime", endTime);
+        timeLeft = endTime - now;
+      }
+
+      let minutes = Math.floor(timeLeft / 60000);
+      let seconds = Math.floor((timeLeft % 60000) / 1000);
+
+      countdownEl.textContent =
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    // Update every second
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+
+  window.onload = startCountdown;
+</script>
+<!-- Place Order Now Section -->
+<!-- PREMIUM CONSULTATION SECTION -->
+<section class="py-24 bg-gradient-to-b from-green-50 to-white overflow-hidden" id="lead-form">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- LEFT SIDE -->
+<div>
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+          FREE AYURVEDIC GUIDANCE
+        </span>
+<h2 class="text-5xl md:text-6xl font-bold text-green-900 mt-8 mb-8 leading-tight">
+          Book Free <br/>
+          Consultation Call <br/>
+          With Our <span class="text-green-600">Ayurvedic Expert</span>
+</h2>
+<p class="text-gray-600 text-xl leading-relaxed mb-10">
+          Get personalized Ayurvedic guidance for maintaining healthy sugar levels naturally and safely.
+        </p>
+<!-- FEATURES -->
+<div class="space-y-5 mb-10">
+<div class="flex items-start gap-4 bg-white p-5 rounded-3xl shadow-lg border border-green-100 hover:scale-[1.02] transition">
+<div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">
+              🌿
+            </div>
+<div>
+<h4 class="text-xl font-bold text-green-900">
+                Ayurvedic Expert Guidance
+              </h4>
+<p class="text-gray-600">
+                Personalized wellness consultation based on your health concerns.
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-white p-5 rounded-3xl shadow-lg border border-green-100 hover:scale-[1.02] transition">
+<div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">
+              📞
+            </div>
+<div>
+<h4 class="text-xl font-bold text-green-900">
+                Free Consultation Call
+              </h4>
+<p class="text-gray-600">
+                Speak directly with our wellness support team at no cost.
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-white p-5 rounded-3xl shadow-lg border border-green-100 hover:scale-[1.02] transition">
+<div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">
+              🛡
+            </div>
+<div>
+<h4 class="text-xl font-bold text-green-900">
+                100% Herbal Solutions
+              </h4>
+<p class="text-gray-600">
+                Safe and natural Ayurvedic wellness support.
+              </p>
+</div>
+</div>
+</div>
+<!-- TRUST BADGES -->
+<div class="flex flex-wrap gap-4">
+<div class="bg-green-900 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg">
+            ✅ 25K+ Customers
+          </div>
+<div class="bg-white border border-green-200 px-6 py-3 rounded-2xl font-semibold text-green-900 shadow-lg">
+            🌿 100% Ayurvedic
+          </div>
+</div>
+</div>
+<!-- RIGHT SIDE -->
+<div>
+<div class="bg-gradient-to-r from-green-900 via-green-800 to-green-700 rounded-[40px] shadow-2xl p-10 md:p-14 relative overflow-hidden">
+<!-- Glow -->
+<div class="absolute top-0 right-0 w-72 h-72 bg-green-400 opacity-20 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="text-white mb-10">
+<span class="bg-white/10 border border-white/20 px-5 py-2 rounded-full text-sm inline-block mb-5">
+                LIMITED FREE CONSULTATION
+              </span>
+<h3 class="text-5xl font-bold mb-5 leading-tight">
+                Start Your <br/>
+                Wellness Journey
+              </h3>
+<p class="text-green-100 text-lg">
+                Fill the form below and our expert team will contact you shortly.
+              </p>
+</div>
+<!-- FORM -->
+<form action="https://formspree.io/f/mqableld" class="space-y-6" id="orderForm" method="POST">
+<div>
+<label class="block text-white font-semibold mb-3">
+                  Full Name
+                </label>
+<input class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white" id="name" name="name" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-white font-semibold mb-3">
+                  Contact Number
+                </label>
+<input class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white" id="contact" name="contact" placeholder="Enter your phone number" required="" type="tel"/>
+</div>
+<button class="w-full bg-white text-green-900 font-bold py-4 rounded-2xl hover:scale-[1.02] transition duration-300 shadow-xl text-lg" type="submit">
+                Book Free Consultation
+              </button>
+</form>
+<div class="hidden mt-6 bg-white text-green-900 font-semibold p-4 rounded-2xl text-center" id="orderMessage">
+              ✅ Consultation booked successfully.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews Section -->
+<!-- Footer -->
+<!-- Popup Modal -->
+<!-- Popup Modal -->
+<!-- Popup Modal -->
+<div class="modal" id="consultationModal">
+<div class="modal-content premium-modal">
+<span class="close-btn" id="closeModal">×</span>
+<div class="premium-modal-left">
+<div class="premium-badge">🌿 FREE AYURVEDIC CONSULTATION</div>
+<h3>Talk To Our <span>Ayurvedic Expert</span></h3>
+<p>
+Get personalized wellness guidance and Ayurvedic consultation for maintaining healthy sugar levels naturally.
+</p>
+<div class="premium-points">
+<div><span>✅</span> Personalized Ayurvedic Guidance</div>
+<div><span>📞</span> Free Expert Consultation Call</div>
+<div><span>🌿</span> 100% Natural Wellness Support</div>
+</div>
+</div>
+<div class="premium-modal-right">
+<div class="premium-form-card">
+<div class="premium-form-head">
+<h4>Book Your Free Call</h4>
+<p>Fill your details and our expert team will contact you shortly.</p>
+</div>
+<form action="https://formspree.io/f/mqableld" class="modal-form space-y-5" id="consultationForm" method="POST">
+<div>
+<label for="modalName">Full Name</label>
+<input id="modalName" name="name" placeholder="Enter your name" required="" type="text">
+<p class="text-xs text-red-400 hidden" id="modalNameError">Please enter a valid name.</p>
+</input></div>
+<div>
+<label for="modalContact">Contact Number</label>
+<input id="modalContact" name="contact" placeholder="Enter your phone number" required="" type="tel">
+<p class="text-xs text-red-400 hidden" id="modalContactError">Please enter a valid 10-digit number.</p>
+</input></div>
+<div class="premium-mini-badges">
+<span>✅ COD Available</span>
+<span>🌿 Ayurvedic</span>
+<span>⭐ Trusted Brand</span>
+</div>
+<button type="submit">
+Book Free Consultation
+</button>
+</form>
+<p class="mt-4 text-center text-green-300 hidden" id="modalMessage">
+Consultation booked successfully!
+</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Parallax Effect
+    function updateParallax() {
+      const scrollPosition = window.scrollY;
+      const hero = document.getElementById('hero');
+      hero.style.backgroundPositionY = `${50 + scrollPosition * 0.1}%`;
+    }
+    window.addEventListener('scroll', updateParallax);
+
+    // Sticky Navigation
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu.classList.contains('active')) {
+          mobileMenu.classList.remove('active');
+        }
+      });
+    });
+
+    // Mobile Menu Toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Scroll-triggered animations (reapply on every scroll)
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const cards = entry.target.querySelectorAll('.stagger-1, .stagger-2, .stagger-3');
+          cards.forEach(card => card.classList.remove('slide-in'));
+          setTimeout(() => {
+            cards.forEach((card, index) => {
+              setTimeout(() => card.classList.add('slide-in'), index * 200);
+            });
+          }, 100);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('#benefits-grid, #blood-pressure-grid, #testimonials, #reviews, #faqs').forEach(section => observer.observe(section));
+
+   
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      track.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      updateCarousel();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    setInterval(nextSlide, 1000);
+
+    // Particle Effect (Permanent)
+    const canvas = document.getElementById('particleCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 2 - 1;
+        this.opacity = 0.5 + Math.random() * 0.5;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
+        if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
+      }
+      draw() {
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    const particles = [];
+    for (let i = 0; i < 100; i++) particles.push(new Particle());
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let particle of particles) {
+        particle.update();
+        particle.draw();
+      }
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // Form Validation and Submission
+    function validateForm(form, nameId, contactId = null, emailId = null, textId = null) {
+      const name = form.querySelector(`#${nameId}`);
+      const nameError = form.querySelector(`#${nameId}Error`);
+      let isValid = true;
+
+      if (!name.value.trim() || !/^[a-zA-Z\s]+$/.test(name.value.trim())) {
+        name.classList.add('error');
+        nameError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        name.classList.remove('error');
+        nameError.classList.add('hidden');
+      }
+
+      if (contactId) {
+        const contact = form.querySelector(`#${contactId}`);
+        const contactError = form.querySelector(`#${contactId}Error`);
+        if (!/^\d{10}$/.test(contact.value.trim())) {
+          contact.classList.add('error');
+          contactError.classList.remove('hidden');
+          isValid = false;
+        } else {
+          contact.classList.remove('error');
+          contactError.classList.add('hidden');
+        }
+      }
+
+      if (emailId) {
+        const email = form.querySelector(`#${emailId}`);
+        const emailError = form.querySelector(`#${emailId}Error`);
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+          email.classList.add('error');
+          emailError.classList.remove('hidden');
+          isValid = false;
+        } else {
+          email.classList.remove('error');
+          emailError.classList.add('hidden');
+        }
+      }
+
+      if (textId) {
+        const text = form.querySelector(`#${textId}`);
+        const textError = form.querySelector(`#${textId}Error`);
+        if (!text.value.trim()) {
+          text.classList.add('error');
+          textError.classList.remove('hidden');
+          isValid = false;
+        } else {
+          text.classList.remove('error');
+          textError.classList.add('hidden');
+        }
+      }
+
+      return isValid;
+    }
+
+    
+// Order Form
+const orderForm = document.getElementById('orderForm');
+const orderMessage = document.getElementById('orderMessage');
+
+orderForm.addEventListener('submit', async (e) => {
+
+  e.preventDefault();
+
+  if (validateForm(orderForm, 'name', 'contact')) {
+
+    const name = document.getElementById('name').value.trim();
+    const contact = document.getElementById('contact').value.trim();
+
+    const formData = new FormData(orderForm);
+
+    try {
+
+      // SAVE TO FIREBASE
+      await firebase.database().ref("consultations").push({
+        name: name,
+        contact: contact,
+        source: "main_consultation_form",
+        createdAt: Date.now()
+      });
+
+      // SEND TO FORMSPREE
+      const response = await fetch('https://formspree.io/f/mqableld', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+
+        orderForm.reset();
+
+        orderMessage.classList.remove("hidden");
+
+        setTimeout(() => {
+          window.location.href = 'formsubmit.html';
+        }, 1000);
+
+      } else {
+
+        alert('Failed to submit form. Please try again.');
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+      alert('An error occurred. Please try again.');
+
+    }
+
+  }
+
+});
+
+orderForm.addEventListener('input', () => {
+  validateForm(orderForm, 'name', 'contact');
+});
+
+
+    // Review Form (Local Submission)
+    const reviewForm = document.getElementById('reviewForm');
+    const formMessage = document.getElementById('formMessage');
+
+    reviewForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (validateForm(reviewForm, 'reviewName', null, 'reviewEmail', 'reviewText')) {
+        formMessage.classList.remove('hidden');
+        reviewForm.reset();
+        setTimeout(() => formMessage.classList.add('hidden'), 3000);
+      }
+    });
+
+    reviewForm.addEventListener('input', (e) => validateForm(reviewForm, 'reviewName', null, 'reviewEmail', 'reviewText'));
+
+    
+// Popup Modal
+const modal = document.getElementById('consultationModal');
+const closeBtn = document.getElementById('closeModal');
+const consultationForm = document.getElementById('consultationForm');
+const modalMessage = document.getElementById('modalMessage');
+
+// Show modal
+setTimeout(() => {
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}, 1000);
+
+// Close modal
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+});
+
+// Handle popup form submission
+consultationForm.addEventListener('submit', async (e) => {
+
+  e.preventDefault();
+
+  if (validateForm(consultationForm, 'modalName', 'modalContact')) {
+
+    const name = document.getElementById('modalName').value.trim();
+    const contact = document.getElementById('modalContact').value.trim();
+
+    const formData = new FormData(consultationForm);
+
+    try {
+
+      // SAVE TO FIREBASE
+      await firebase.database().ref("consultations").push({
+        name: name,
+        contact: contact,
+        source: "popup_consultation_form",
+        createdAt: Date.now()
+      });
+
+      // SEND TO FORMSPREE
+      const response = await fetch('https://formspree.io/f/mqableld', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+
+        consultationForm.reset();
+
+        modalMessage.classList.remove('hidden');
+
+        setTimeout(() => {
+          window.location.href = 'formsubmit.html';
+        }, 1000);
+
+      } else {
+
+        alert('Failed to book consultation. Please try again.');
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+      alert('An error occurred. Please try again.');
+
+    }
+
+  }
+
+});
+
+consultationForm.addEventListener('input', () => {
+  validateForm(consultationForm, 'modalName', 'modalContact');
+});
+
+</script>
+<script>
+    document.getElementById('reviewsNextBtn').addEventListener('click', function() {
+        const container = document.querySelector('#reviews .flex');
+        container.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+    </script><script>
+    document.getElementById('audioNextBtn').addEventListener('click', function() {
+        const container = document.querySelector('#audio-reviews .flex');
+        container.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+    </script>
+<section class="py-24 bg-gradient-to-b from-white to-green-50 relative overflow-hidden" id="live-reviews">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-20">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+💬 CUSTOMER STORY SECTION
+</span>
+<h2 class="text-5xl md:text-6xl font-bold text-green-900 mt-6 leading-tight">
+Your Wellness Story <br/>
+Can Inspire Others
+</h2>
+<p class="text-gray-600 text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
+Share your Diacare experience and help others discover the power of natural Ayurvedic wellness.
+</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+<div class="bg-white rounded-[32px] shadow-xl border border-green-100 p-10 hover:-translate-y-2 transition duration-300">
+<div class="w-20 h-20 rounded-3xl bg-gradient-to-r from-green-600 to-green-800 flex items-center justify-center text-4xl text-white mb-8">
+🌿
+</div>
+<h3 class="text-3xl font-bold text-green-900 mb-4">
+Natural Wellness
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Tell people how Diacare supported your healthy lifestyle and Ayurvedic wellness journey naturally.
+</p>
+</div>
+<div class="bg-gradient-to-br from-green-900 via-green-800 to-green-700 rounded-[32px] shadow-2xl p-10 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-52 h-52 bg-green-400 opacity-20 blur-3xl rounded-full"></div>
+<div class="relative z-10">
+<div class="text-5xl mb-8">⭐</div>
+<h3 class="text-3xl font-bold mb-4">
+Verified Customer Voices
+</h3>
+<p class="text-green-100 leading-relaxed mb-8">
+Every approved review helps new customers build confidence in authentic Ayurvedic wellness.
+</p>
+<div class="space-y-4">
+<div class="bg-white/10 rounded-2xl px-5 py-4">✔ Trusted Wellness Brand</div>
+<div class="bg-white/10 rounded-2xl px-5 py-4">✔ Thousands Of Happy Customers</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-[32px] shadow-xl border border-green-100 p-10 hover:-translate-y-2 transition duration-300">
+<div class="w-20 h-20 rounded-3xl bg-gradient-to-r from-green-600 to-green-800 flex items-center justify-center text-4xl text-white mb-8">
+💬
+</div>
+<h3 class="text-3xl font-bold text-green-900 mb-4">
+Share Your Experience
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Your honest review can motivate someone to begin their own wellness transformation journey.
+</p>
+</div>
+</div>
+<div class="max-w-5xl mx-auto">
+<div class="bg-gradient-to-r from-green-900 via-green-800 to-green-700 rounded-[40px] shadow-2xl p-10 md:p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-72 h-72 bg-green-400 opacity-20 rounded-full blur-3xl"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div>
+<span class="bg-white/10 border border-white/20 px-5 py-2 rounded-full text-sm inline-block mb-6 text-white">
+CUSTOMER REVIEW FORM
+</span>
+<h3 class="text-5xl font-bold text-white leading-tight mb-6">
+Share Your <br/>
+Experience
+</h3>
+<p class="text-green-100 text-lg leading-relaxed mb-10">
+Tell us how Diacare helped you and inspire thousands of people seeking natural wellness solutions.
+</p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-white/10 px-5 py-3 rounded-2xl text-white">⭐ Verified Reviews</div>
+<div class="bg-white/10 px-5 py-3 rounded-2xl text-white">🌿 Ayurvedic Wellness</div>
+</div>
+</div>
+<form class="space-y-6" id="reviewForm">
+<div>
+<label class="block text-white font-semibold mb-3">Full Name</label>
+<input class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white" id="reviewName" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-white font-semibold mb-3">Your City</label>
+<input class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white" id="reviewCity" placeholder="Enter your city" required="" type="text"/>
+</div>
+<div>
+<label class="block text-white font-semibold mb-3">Rate Your Experience</label>
+<select class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-white" id="rating">
+<option class="text-black" value="5">⭐⭐⭐⭐⭐ Excellent</option>
+<option class="text-black" value="4">⭐⭐⭐⭐ Very Good</option>
+<option class="text-black" value="3">⭐⭐⭐ Good</option>
+<option class="text-black" value="2">⭐⭐ Average</option>
+<option class="text-black" value="1">⭐ Poor</option>
+</select>
+</div>
+<div>
+<label class="block text-white font-semibold mb-3">Your Review</label>
+<textarea class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white min-h-[140px]" id="reviewText" placeholder="Share your experience with Diacare..." required=""></textarea>
+</div>
+<button class="w-full bg-white text-green-900 font-bold py-4 rounded-2xl hover:scale-[1.02] transition duration-300 shadow-xl text-lg" type="submit">
+Submit Your Review
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-gradient-to-b from-green-50 to-white" id="faqs">
+<div class="max-w-6xl mx-auto px-4">
+<div class="text-center mb-16">
+<span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+❓ HELP &amp; SUPPORT
+</span>
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+Frequently Asked Questions
+</h2>
+<p class="text-gray-600 text-lg max-w-2xl mx-auto">
+Find answers to the most common questions about Diacare and Ayurvedic wellness support.
+</p>
+</div>
+<div class="space-y-6">
+<details>
+<summary aria-controls="faq1" aria-expanded="false">What is Diacare Powder Powder?</summary>
+<div id="faq1">Diacare Powder is a natural herbal supplement by ShreeJee, formulated to support healthy blood sugar levels by stimulating insulin production naturally.</div>
+</details>
+<details>
+<summary aria-controls="faq2" aria-expanded="false">How do I use it?</summary>
+<div id="faq2">Mix 1-2 teaspoons of Diacare Powder with water or your favorite beverage, and consume once daily, preferably in the morning.</div>
+</details>
+<details>
+<summary aria-controls="faq3" aria-expanded="false">Is it safe for everyone?</summary>
+<div id="faq3">It is generally safe for most adults, but consult a healthcare professional if you are pregnant, nursing, or on medication.</div>
+</details>
+<details>
+<summary aria-controls="faq4" aria-expanded="false">How long will it take to see results?</summary>
+<div id="faq4">Results may vary, but many users notice improvements in blood sugar levels within 2-4 weeks of regular use.</div>
+</details>
+<details>
+<summary aria-controls="faq5" aria-expanded="false">Can it replace my diabetes medication?</summary>
+<div id="faq5">No, it is a supplement to support health, not a substitute for prescribed medication. Consult your doctor before making changes.</div>
+</details>
+<details>
+<summary aria-controls="faq6" aria-expanded="false">How can I place an order?</summary>
+<div id="faq6">
+  You can purchase Diacare directly from our website or place your order by contacting us at
+  <a href="mailto:shreejeeayucare@gmail.com">shreejeeayucare@gmail.com</a>.
+  Our team will be happy to assist you.
+</div>
+</details>
+</div>
+</div></section>
+<footer class="bg-green-900 text-white mt-16">
+<div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Brand Info -->
+<div>
+<img alt="ShreeJee Ayucare Logo" class="w-20 h-20 mb-4" src="logo.webp"/>
+<p class="text-sm leading-relaxed">
+        ShreeJee Ayucare — Delivering authentic Ayurvedic remedies to support a healthier and happier life.
+      </p>
+</div>
+<!-- Company -->
+<div>
+<h4 class="font-bold text-lg mb-4 border-b-2 border-green-500 pb-1">Company</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-green-400 transition" href="index.html">Home</a></li>
+<li><a class="hover:text-green-400 transition" href="about.html">About Us</a></li>
+<li><a class="hover:text-green-400 transition" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<!-- Policies -->
+<div>
+<h4 class="font-bold text-lg mb-4 border-b-2 border-green-500 pb-1">Policies</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-green-400 transition" href="privacy-policy.html">Privacy Policy</a></li>
+<li><a class="hover:text-green-400 transition" href="refund-policy.html">Refund Policy</a></li>
+<li><a class="hover:text-green-400 transition" href="shipping-policy.html">Shipping Policy</a></li>
+<li><a class="hover:text-green-400 transition" href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<!-- Get in Touch -->
+<div>
+<h4 class="font-bold text-lg mb-4 border-b-2 border-green-500 pb-1">Get in Touch</h4>
+<p class="mb-2">📧 <a class="hover:text-green-400 transition" href="mailto:shreejeeayucare@gmail.com">shreejeeayucare@gmail.com</a></p>
+<p>🌐 Follow us on social media</p>
+<div class="flex space-x-4 mt-3">
+<a class="hover:text-green-400 transition text-xl" href="https://www.facebook.com/profile.php?id=61577602807469" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+<a class="hover:text-green-400 transition text-xl" href="https://www.instagram.com/shreejeeayucare/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+</div>
+</div>
+</div>
+<div class="bg-green-800 py-4 text-center text-sm">
+    © 2025 ShreeJee Ayucare. All rights reserved.
+  </div>
+</footer>
+<script>
+// Navbar scroll color effect
+window.addEventListener('scroll', function() {
+    const nav = document.getElementById('mainNav');
+    if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+    } else {
+        nav.classList.remove('nav-scrolled');
+    }
+});
+</script>
+<script>
+async function handleFormSubmit(e, form) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+    if (response.ok) {
+      window.location.href = "formsubmit.html";
+    } else {
+      alert("Failed to submit form. Please try again.");
+    }
+  } catch (err) {
+    alert("An error occurred. Please try again.");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const orderForm = document.getElementById("orderForm");
+  if (orderForm) {
+    orderForm.addEventListener("submit", function(e) {
+      handleFormSubmit(e, this);
+    });
+  }
+  const consultationForm = document.getElementById("consultationForm");
+  if (consultationForm) {
+    consultationForm.addEventListener("submit", function(e) {
+      handleFormSubmit(e, this);
+    });
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.getElementById("imageReviewTrack");
+  const nextBtn = document.getElementById("nextImageReview");
+  const prevBtn = document.getElementById("prevImageReview");
+  const counter = document.getElementById("imageReviewCounter");
+
+  let index = 0;
+  const totalSlides = Math.ceil(track.children.length / 2);
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    counter.textContent = `${index + 1} / ${totalSlides}`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (index < totalSlides - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
+});
+</script>
+<script>
+  const slider = document.getElementById("heroSlider");
+  let index = 0;
+  const totalSlides = 3;
+
+  function slideHero() {
+    index = (index + 1) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(slideHero, 3000); // change every 3 sec
+</script>
+</section>
+<script>
+const reviewsContainer = document.getElementById("reviewsContainer");
+
+// Predefined reviews (approved)
+let reviews = [
+  {name: "Ravi Kumar", city: "Delhi", review: "Very effective product, sugar levels improved!", approved: true},
+  {name: "Sunita Sharma", city: "Jaipur", review: "Natural and safe, I feel much better.", approved: true}
+];
+
+// Spam protection
+let lastSubmitTime_main = 0;
+
+function renderReviews(){
+  reviewsContainer.innerHTML = "";
+  reviews.filter(r => r.approved).reverse().forEach(r => {
+    reviewsContainer.innerHTML += `
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p>"${r.review}"</p>
+        <p class="text-sm text-green-700 font-semibold">– ${r.name}, ${r.city}</p>
+      </div>
+    `;
+  });
+}
+
+renderReviews();
+
+document.getElementById("reviewForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const now = Date.now();
+  if(now - lastSubmitTime_firebase < 10000){
+    alert("Please wait before submitting again.");
+    return;
+  }
+
+  const name = document.getElementById("reviewName").value.trim();
+  const city = document.getElementById("reviewCity").value.trim();
+  const review = document.getElementById("reviewText").value.trim();
+
+  if(review.length < 10){
+    alert("Review too short");
+    return;
+  }
+
+  reviews.push({name, city, review, approved: false});
+
+  alert("Your review is submitted. Thankyou");
+  this.reset();
+  lastSubmitTime_firebase = now;
+});
+</script>
+<!-- Firebase Reviews Integration -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyB1wbJonjyJQDrPJWbMCVBtRolJH4HDskU",
+  authDomain: "shreejee-ayucare.firebaseapp.com",
+  databaseURL: "https://shreejee-ayucare-default-rtdb.firebaseio.com",
+  projectId: "shreejee-ayucare",
+  storageBucket: "shreejee-ayucare.firebasestorage.app",
+  messagingSenderId: "247248655859",
+  appId: "1:247248655859:web:b09bfc30ff6953aad42e86"
+};
+
+firebase.initializeApp(firebaseConfig);
+(function(){
+const db = firebase.database();
+
+let lastSubmitTime_firebase = 0;
+
+document.getElementById("reviewForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const now = Date.now();
+  if(now - lastSubmitTime_firebase < 10000){
+    alert("Please wait before submitting again.");
+    return;
+  }
+
+  const name = document.getElementById("reviewName").value.trim();
+  const city = document.getElementById("reviewCity").value.trim();
+  const review = document.getElementById("reviewText").value.trim();
+  const rating = parseInt(document.getElementById("rating").value);
+
+  if(review.length < 10){
+    alert("Review too short");
+    return;
+  }
+
+  db.ref("reviews").push({
+    name,
+    city,
+    review,
+    rating,
+    approved: false,
+    timestamp: Date.now()
+  });
+
+  alert("Review submitted! It will be visible after approval.");
+  this.reset();
+  lastSubmitTime_firebase = now;
+});
+
+const container = document.getElementById("reviewsContainer");
+
+function getStars(rating){
+  return "⭐".repeat(rating);
+}
+
+db.ref("reviews").on("value", (snapshot) => {
+  container.innerHTML = "";
+
+  let reviews = [];
+
+  snapshot.forEach(child => {
+    const data = child.val();
+    if(data.approved){
+      reviews.push(data);
+    }
+  });
+
+  reviews.sort((a,b)=> b.timestamp - a.timestamp);
+
+  let html = "";
+  reviews.forEach(r=>{
+    html += `
+      <div class="review-card">
+        <div class="review-stars">${getStars(r.rating)}</div>
+        <p class="text-gray-700 italic mb-3">"${r.review}"</p>
+        <div class="flex justify-between">
+          <span class="text-green-700 font-semibold">✔ ${r.name}</span>
+          <span class="text-sm text-gray-500">${r.city}</span>
+        </div>
+      </div>
+    `;
+  });
+  // duplicate for infinite loop
+  container.innerHTML = html + html;
+});
+})();
+</script>
+<script>
+// Pause on hover
+const track = document.getElementById("reviewsContainer");
+if(track){
+  track.addEventListener("mouseenter", ()=> track.style.animationPlayState="paused");
+  track.addEventListener("mouseleave", ()=> track.style.animationPlayState="running");
+}
+
+// Mobile swipe drag
+let isDown = false, startX, scrollLeft;
+track?.addEventListener('mousedown', e=>{
+  isDown=true;
+  startX=e.pageX;
+});
+track?.addEventListener('mouseleave', ()=> isDown=false);
+track?.addEventListener('mouseup', ()=> isDown=false);
+track?.addEventListener('mousemove', e=>{
+  if(!isDown) return;
+  const walk = (e.pageX - startX) * 2;
+  track.style.transform = `translateX(${walk}px)`;
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ================= POPUP MODAL =================
+  const modal = document.getElementById("consultationModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Open popup after 1 second
+  setTimeout(() => {
+    if(modal){
+      modal.style.display = "flex";
+    }
+  }, 1000);
+
+  // Close popup
+  if(closeBtn){
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+
+  // Close on outside click
+  window.addEventListener("click", function(e){
+    if(e.target === modal){
+      modal.style.display = "none";
+    }
+  });
+
+  // ================= MAIN CONSULTATION FORM =================
+  const orderForm = document.getElementById("orderForm");
+
+  if(orderForm){
+
+    orderForm.addEventListener("submit", async function(e){
+
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const contact = document.getElementById("contact").value.trim();
+
+      const formData = new FormData(orderForm);
+
+      try {
+
+        // SAVE TO FIREBASE
+        await firebase.database().ref("consultations").push({
+          name: name,
+          contact: contact,
+          source: "main_consultation_form",
+          createdAt: Date.now()
+        });
+
+        // SEND TO FORMSPREE
+        const response = await fetch(orderForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if(response.ok){
+          window.location.href = "formsubmit.html";
+        } else {
+          alert("Failed to submit form.");
+        }
+
+      } catch(err){
+        console.log(err);
+        alert("Error submitting form.");
+      }
+
+    });
+
+  }
+
+  // ================= POPUP CONSULTATION FORM =================
+  const consultationForm = document.getElementById("consultationForm");
+
+  if(consultationForm){
+
+    consultationForm.addEventListener("submit", async function(e){
+
+      e.preventDefault();
+
+      const name = document.getElementById("modalName").value.trim();
+      const contact = document.getElementById("modalContact").value.trim();
+
+      const formData = new FormData(consultationForm);
+
+      try {
+
+        // SAVE TO FIREBASE
+        await firebase.database().ref("consultations").push({
+          name: name,
+          contact: contact,
+          source: "popup_consultation_form",
+          createdAt: Date.now()
+        });
+
+        // SEND TO FORMSPREE
+        const response = await fetch(consultationForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if(response.ok){
+          window.location.href = "formsubmit.html";
+        } else {
+          alert("Failed to submit form.");
+        }
+
+      } catch(err){
+        console.log(err);
+        alert("Error submitting form.");
+      }
+
+    });
+
+  }
+
+});
+</script>
+<script>
+/* HERO AUTO SLIDER */
+const heroSlider = document.getElementById('heroSlider');
+const heroSlides = document.querySelectorAll('#heroSlider .hero-slide');
+
+let currentHeroSlide = 0;
+
+function updateHeroSlider(){
+  heroSlider.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
+}
+
+function nextHeroSlide(){
+  currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+  updateHeroSlider();
+}
+
+setInterval(nextHeroSlide, 3000);
+</script>
+<script id="mobile-content-reducer">
+document.addEventListener("DOMContentLoaded", function(){
+
+  if(window.innerWidth <= 768){
+
+    /* CONSULTATION SECTION MOBILE CONTENT */
+    const leadSection = document.querySelector("#lead-form");
+
+    if(leadSection){
+
+      const leadPara = leadSection.querySelector("p.text-gray-600.text-xl");
+      if(leadPara){
+        leadPara.innerHTML = "Get quick Ayurvedic guidance for healthy sugar support.";
+      }
+
+      const featureCards = leadSection.querySelectorAll(".flex.items-start.gap-4");
+
+      if(featureCards.length > 0){
+
+        featureCards[0].querySelector("p").innerHTML =
+        "Personal wellness consultation.";
+
+        featureCards[1].querySelector("p").innerHTML =
+        "Free expert guidance call.";
+
+        featureCards[2].querySelector("p").innerHTML =
+        "Safe Ayurvedic wellness support.";
+      }
+
+    }
+
+    /* YOUR WELLNESS STORY MOBILE CONTENT */
+    const storySection = document.querySelector("#live-reviews");
+
+    if(storySection){
+
+      const storyPara = storySection.querySelector("p.text-gray-600.text-xl");
+      if(storyPara){
+        storyPara.innerHTML =
+        "Share your Diacare experience with others.";
+      }
+
+      const storyCards = storySection.querySelectorAll(".rounded-\[32px\]");
+
+      if(storyCards.length >= 3){
+
+        const p1 = storyCards[0].querySelector("p");
+        const p2 = storyCards[1].querySelector("p");
+        const p3 = storyCards[2].querySelector("p");
+
+        if(p1){
+          p1.innerHTML = "Tell people about your wellness journey.";
+        }
+
+        if(p2){
+          p2.innerHTML = "Help others discover natural wellness.";
+        }
+
+        if(p3){
+          p3.innerHTML = "Your story can motivate healthy living.";
+        }
+
+      }
+
+    }
+
+  }
+
+});
+</script>
+<script id="ultra-compact-mobile-sections">
+document.addEventListener("DOMContentLoaded", function(){
+
+  if(window.innerWidth <= 768){
+
+    /* CONSULTATION SECTION */
+    const lead = document.querySelector("#lead-form");
+
+    if(lead){
+
+      const heading = lead.querySelector("h2");
+      if(heading){
+        heading.innerHTML = "Free Ayurvedic<br>Consultation";
+      }
+
+      const para = lead.querySelector("p.text-gray-600");
+      if(para){
+        para.innerHTML = "Quick expert wellness guidance.";
+      }
+
+      const cards = lead.querySelectorAll(".flex.items-start.gap-4");
+
+      cards.forEach((card, index) => {
+
+        const title = card.querySelector("h4");
+        const text = card.querySelector("p");
+
+        if(index === 0){
+          title.innerHTML = "Expert Guidance";
+          text.innerHTML = "Personal Ayurvedic support.";
+        }
+
+        if(index === 1){
+          title.innerHTML = "Free Call";
+          text.innerHTML = "Talk with our team.";
+        }
+
+        if(index === 2){
+          title.innerHTML = "Natural Care";
+          text.innerHTML = "Safe herbal wellness.";
+        }
+
+      });
+
+    }
+
+    /* STORY SECTION */
+    const story = document.querySelector("#live-reviews");
+
+    if(story){
+
+      const heading = story.querySelector("h2");
+      if(heading){
+        heading.innerHTML = "Share Your<br>Wellness Story";
+      }
+
+      const para = story.querySelector("p.text-gray-600");
+      if(para){
+        para.innerHTML = "Inspire others with your experience.";
+      }
+
+      const cards = story.querySelectorAll(".rounded-\[32px\]");
+
+      cards.forEach((card, index) => {
+
+        const title = card.querySelector("h3");
+        const text = card.querySelector("p");
+
+        if(index === 0){
+          title.innerHTML = "Natural Wellness";
+          text.innerHTML = "Share your Diacare journey.";
+        }
+
+        if(index === 1){
+          title.innerHTML = "Help Others";
+          text.innerHTML = "Guide others naturally.";
+        }
+
+        if(index === 2){
+          title.innerHTML = "Inspire";
+          text.innerHTML = "Motivate healthy living.";
+        }
+
+      });
+
+    }
+
+  }
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const track=document.getElementById("reviewsContainer");
+ if(track && !track.dataset.loopReady){
+   track.innerHTML+=track.innerHTML;
+   track.dataset.loopReady="1";
+ }
+});
+</script>
+
+<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/919557794169?text=Hi%20ShreeJee%20Ayucare%2C%20I%20came%20from%20your%20website%20and%20want%20to%20know%20about%20Diacare%20Powder." target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+</body>
+</html>

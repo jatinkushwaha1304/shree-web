@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - ShreeJee Ayucare</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero-bg {
+      background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('about.webp');
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hover-card {
+      transition: all 0.35s ease;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .glass {
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #166534, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Infinite Review Scroll */
+
+    .review-marquee {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    .review-track {
+      display: flex;
+      gap: 24px;
+      width: max-content;
+      animation: scrollReviews 30s linear infinite;
+    }
+
+    @keyframes scrollReviews {
+
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+
+    }
+
+    .review-card {
+
+      min-width: 350px;
+      max-width: 350px;
+
+      background: white;
+
+      border-radius: 30px;
+
+      padding: 30px;
+
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+      border: 1px solid #dcfce7;
+
+      transition: all 0.35s ease;
+
+    }
+
+    .review-card:hover {
+
+      transform: translateY(-10px) scale(1.03);
+
+      box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+
+    }
+
+    .review-stars {
+
+      color: #facc15;
+
+      font-size: 22px;
+
+      margin-bottom: 15px;
+
+    }
+
+    @media(max-width:768px){
+
+      .review-card{
+        min-width:300px;
+        max-width:300px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Navigation Bar -->
+<nav id="mainNav" class="bg-green-900 text-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto flex items-center justify-between px-4 py-3">
+
+    <!-- Logo / Brand -->
+    <div class="text-xl font-bold tracking-wide">
+      ShreeJee Ayucare
+    </div>
+
+    <!-- Hamburger Button -->
+    <button id="menuToggle" class="block md:hidden text-white text-2xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Menu Links -->
+    <div id="navLinks" class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-green-900 md:bg-transparent z-50">
+      <a href="index.html" class="block px-4 py-2 hover:bg-green-800 md:hover:bg-transparent">Home</a>
+      <a href="med_details.html" class="block px-4 py-2 hover:bg-green-800 md:hover:bg-transparent">Product Details</a>
+      <a href="index.html#lead-form" class="block px-4 py-2 hover:bg-green-800 md:hover:bg-transparent">Book Free Consultation</a>
+    </div>
+
+  </div>
+</nav>
+
+<script>
+  document.getElementById("menuToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("hidden");
+  });
+</script>
+
+<!-- HERO -->
+<section class="hero-bg min-h-[70vh] flex items-center justify-center relative overflow-hidden">
+
+  <div class="max-w-5xl mx-auto px-4 text-center text-white relative z-10">
+
+    <div class="glass inline-block px-5 py-2 rounded-full border border-white/20 mb-6">
+      📞 CUSTOMER SUPPORT
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">
+      We're Always <br>
+      <span class="text-green-300">Here For You</span>
+    </h1>
+
+    <p class="text-xl text-green-100 max-w-3xl mx-auto leading-relaxed">
+      Reach out to us for support, product queries, feedback, or complaints. Your satisfaction matters to us.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="py-24 bg-white">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+      <!-- LEFT -->
+      <div>
+
+        <span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+          CONTACT INFORMATION
+        </span>
+
+        <h2 class="text-5xl font-bold text-green-900 mt-8 mb-8 leading-tight">
+          Let's Start A <br>
+          Conversation
+        </h2>
+
+        <p class="text-gray-600 text-lg leading-relaxed mb-10">
+          Our support team is always ready to help you with any questions, concerns, or product-related guidance.
+        </p>
+
+        <div class="space-y-6">
+
+          <!-- CARD -->
+          <div class="bg-green-50 rounded-3xl p-6 flex items-start gap-5 hover-card border border-green-100">
+
+            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-3xl">
+              📧
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-green-900 mb-2">
+                Email Support
+              </h3>
+
+              <a href="mailto:shreejeeayucare@gmail.com"
+                 class="text-gray-700 hover:text-green-700 text-lg">
+                 shreejeeayucare@gmail.com
+              </a>
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-green-50 rounded-3xl p-6 flex items-start gap-5 hover-card border border-green-100">
+
+            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-3xl">
+              📞
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-green-900 mb-2">
+                Call Support
+              </h3>
+
+              <a href="tel:+919557794169"
+                 class="text-gray-700 hover:text-green-700 text-lg">
+                 +91 9557794169
+              </a>
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-green-50 rounded-3xl p-6 flex items-start gap-5 hover-card border border-green-100">
+
+            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-3xl">
+              ⏰
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-green-900 mb-2">
+                Support Hours
+              </h3>
+
+              <p class="text-gray-700 text-lg">
+                Mon - Sat : 9AM - 7PM
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="bg-gradient-to-r from-green-900 via-green-800 to-green-700 rounded-[40px] shadow-2xl p-10 md:p-14">
+
+        <div class="text-white mb-10">
+
+          <h2 class="text-5xl font-bold mb-5">
+            Send Message
+          </h2>
+
+          <p class="text-green-100 text-lg">
+            Fill out the form and our team will get back to you.
+          </p>
+
+        </div>
+
+        <form id="contactForm" class="space-y-6">
+
+          <input
+            type="text"
+            id="name"
+            required
+            placeholder="Your Name"
+            class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white"
+          >
+
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Your Email"
+            class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white"
+          >
+
+          <textarea
+            id="message"
+            rows="6"
+            required
+            placeholder="Write your message..."
+            class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-white"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="w-full bg-white text-green-900 font-bold py-4 rounded-2xl hover:scale-[1.02] transition duration-300 shadow-xl"
+          >
+            Submit Message
+          </button>
+
+        </form>
+
+        <div
+          id="successMsg"
+          class="hidden mt-6 bg-white text-green-900 font-semibold p-4 rounded-2xl text-center"
+        >
+          ✅ Your message has been submitted successfully.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LIVE CUSTOMER REVIEWS -->
+<section class="py-24 bg-gradient-to-b from-green-50 to-white" id="live-reviews">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <div class="text-center mb-16">
+
+      <span class="bg-green-100 text-green-900 px-5 py-2 rounded-full text-sm font-semibold">
+        REAL CUSTOMER EXPERIENCES
+      </span>
+
+      <h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+        What Our Customers Say
+      </h2>
+
+      <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+        Genuine reviews from customers who experienced the benefits of our Ayurvedic wellness solutions.
+      </p>
+
+    </div>
+
+    <!-- Infinite Review Scroll -->
+    <div class="review-marquee">
+
+      <div id="reviewsContainer" class="review-track"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="bg-green-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- Brand Info -->
+    <div>
+      <img src="logo.webp" alt="ShreeJee Ayucare Logo" class="w-20 h-20 mb-4">
+      <p class="text-sm leading-relaxed">
+        ShreeJee Ayucare — Delivering authentic Ayurvedic remedies to support a healthier and happier life.
+      </p>
+    </div>
+
+    <!-- Company -->
+    <div>
+      <h4 class="font-bold text-lg mb-4 border-b-2 border-green-500 pb-1">Company</h4>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-green-400 transition">About Us</a></li>
+        <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Policies -->
+    <div>
+      <h4 class="font-bold text-lg mb-4 border-b-2 border-green-500 pb-1">Policies</h4>
+      <ul class="space-y-2">
+        <li><a href="privacy-policy.html" class="hover:text-green-400 transition">Privacy Policy</a></li>
+        <li><a href="refund-policy.html" class="hover:text-green-400 transition">Refund Policy</a></li>
+        <li><a href="shipping-policy.html" class="hover:text-green-400 transition">Shipping Policy</a></li>
+        <li><a href="terms-and-conditions.html" class="hover:text-green-400 transition">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Get in Touch -->
+    <div>
+      <h4 class="font-bold text-lg mb-4 border-b-2 border-green-500 pb-1">Get in Touch</h4>
+
+      <p class="mb-2">
+        📧
+        <a href="mailto:shreejeeayucare@gmail.com" class="hover:text-green-400 transition">
+          shreejeeayucare@gmail.com
+        </a>
+      </p>
+
+      <p class="mb-2">
+        📞
+        <a href="tel:+919557794169" class="hover:text-green-400 transition">
+          9557794169
+        </a>
+      </p>
+
+      <p>🌐 Follow us on social media</p>
+
+      <div class="flex space-x-4 mt-3">
+        <a href="#" class="hover:text-green-400 transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-green-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-green-400 transition"><i class="fab fa-youtube"></i></a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bg-green-800 py-4 text-center text-sm">
+    © 2025 ShreeJee Ayucare. All rights reserved.
+  </div>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Firebase Compat -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+<!-- FIREBASE -->
+<script>
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyB1wbJonjyJQDrPJWbMCVBtRolJH4HDskU",
+  authDomain: "shreejee-ayucare.firebaseapp.com",
+  databaseURL: "https://shreejee-ayucare-default-rtdb.firebaseio.com",
+  projectId: "shreejee-ayucare",
+  storageBucket: "shreejee-ayucare.firebasestorage.app",
+  messagingSenderId: "247248655859",
+  appId: "1:247248655859:web:b09bfc30ff6953aad42e86"
+
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.database();
+
+</script>
+
+<!-- CONTACT FORM -->
+<script>
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+
+    await db.ref("complaint").push({
+
+      name,
+      email,
+      message,
+      source: "contact_page",
+      createdAt: Date.now()
+
+    });
+
+    form.reset();
+
+    document
+      .getElementById("successMsg")
+      .classList.remove("hidden");
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("Error submitting message.");
+
+  }
+
+});
+
+</script>
+
+<!-- FIREBASE REVIEWS -->
+<script>
+
+const reviewsContainer = document.getElementById("reviewsContainer");
+
+function getStars(rating) {
+  return "⭐".repeat(rating);
+}
+
+db.ref("reviews").on("value", (snapshot) => {
+
+  reviewsContainer.innerHTML = "";
+
+  let reviews = [];
+
+  snapshot.forEach(child => {
+
+    const data = child.val();
+
+    if(data.approved) {
+      reviews.push(data);
+    }
+
+  });
+
+  reviews.sort((a,b) => b.timestamp - a.timestamp);
+
+  let html = "";
+
+  reviews.forEach(r => {
+
+    html += `
+
+      <div class="review-card">
+
+        <div class="review-stars">
+          ${getStars(r.rating)}
+        </div>
+
+        <p class="text-gray-700 italic text-lg leading-relaxed mb-6">
+          "${r.review}"
+        </p>
+
+        <div class="flex justify-between items-center">
+
+          <div>
+
+            <h4 class="text-green-900 font-bold text-lg">
+              ✔ ${r.name}
+            </h4>
+
+            <p class="text-gray-500 text-sm">
+              ${r.city}
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    `;
+
+  });
+
+  // Duplicate for seamless infinite loop
+  reviewsContainer.innerHTML = html + html;
+
+});
+
+// Pause animation on hover
+reviewsContainer.addEventListener("mouseenter", () => {
+  reviewsContainer.style.animationPlayState = "paused";
+});
+
+reviewsContainer.addEventListener("mouseleave", () => {
+  reviewsContainer.style.animationPlayState = "running";
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diacare Details | ShreeJee Ayucare</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+<style>
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(to bottom,#f0fdf4,#ffffff);
+overflow-x:hidden;
+}
+
+.glow{
+position:absolute;
+border-radius:999px;
+filter:blur(90px);
+opacity:0.2;
+z-index:0;
+}
+
+.premium-card{
+background:white;
+border-radius:36px;
+border:1px solid #dcfce7;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+transition:0.35s ease;
+}
+
+.premium-card:hover{
+transform:translateY(-8px);
+}
+
+.badge{
+display:inline-block;
+background:#dcfce7;
+color:#14532d;
+padding:10px 18px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+}
+
+.gradient-box{
+background:linear-gradient(135deg,#14532d,#166534,#15803d);
+color:white;
+border-radius:40px;
+position:relative;
+overflow:hidden;
+}
+
+.cta-btn{
+display:inline-block;
+background:white;
+color:#14532d;
+padding:16px 30px;
+border-radius:18px;
+font-weight:700;
+transition:0.3s ease;
+}
+
+.cta-btn:hover{
+transform:translateY(-3px) scale(1.02);
+}
+
+.float{
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+}
+</style>
+
+
+<style>
+.premium-card{
+backdrop-filter: blur(10px);
+}
+
+.premium-card:hover{
+box-shadow:0 30px 60px rgba(20,83,45,0.18);
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#166534;
+border-radius:999px;
+}
+
+.glass-strip{
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(10px);
+}
+</style>
+
+</head>
+
+<body class="text-gray-800">
+
+<div class="glow bg-green-300 w-96 h-96 top-0 left-0"></div>
+<div class="glow bg-green-200 w-[500px] h-[500px] bottom-0 right-0"></div>
+
+<!-- NAVBAR -->
+<nav class="bg-green-900 text-white shadow-xl sticky top-0 z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+<div class="flex items-center gap-3">
+<img src="logo.webp" class="w-12 h-12 rounded-full object-cover">
+<div>
+<h2 class="font-bold text-xl">ShreeJee Ayucare</h2>
+<p class="text-xs text-green-200">Premium Ayurvedic Wellness</p>
+</div>
+</div>
+
+<div class="hidden md:flex gap-6 items-center">
+<a href="index.html" class="hover:text-green-300 transition">Home</a>
+<a href="med_details.html" class="hover:text-green-300 transition">Product Details</a>
+<a href="index.html#lead-form" class="hover:text-green-300 transition">Book Consultation</a>
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="relative py-24 overflow-hidden">
+
+<div class="max-w-7xl mx-auto px-4 relative z-10">
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+<div>
+
+<span class="badge">
+🌿 PREMIUM AYURVEDIC WELLNESS
+</span>
+
+<h1 class="text-5xl md:text-6xl font-extrabold text-green-900 leading-tight mt-8">
+Discover The Natural Benefits Of Diacare Powder
+</h1>
+
+<p class="text-xl text-gray-600 leading-relaxed mt-8 mb-10">
+डायाकेयर पाउडर के प्राकृतिक लाभ जानें — स्वस्थ जीवन की ओर एक कदम।
+</p>
+
+<div class="flex flex-wrap gap-4">
+
+<a href="#benefits" class="bg-green-900 text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition">
+Explore Benefits
+</a>
+
+<a href="index.html#lead-form" class="border border-green-900 text-green-900 px-8 py-4 rounded-2xl font-bold hover:bg-green-900 hover:text-white transition">
+Free Consultation
+</a>
+
+</div>
+
+<div class="flex flex-wrap gap-4 mt-10">
+
+<div class="bg-white px-6 py-3 rounded-2xl shadow-lg border border-green-100">
+✅ 100% Ayurvedic
+</div>
+
+<div class="bg-white px-6 py-3 rounded-2xl shadow-lg border border-green-100">
+🌿 Natural Herbs
+</div>
+
+<div class="bg-white px-6 py-3 rounded-2xl shadow-lg border border-green-100">
+⭐ Trusted By Thousands
+</div>
+
+</div>
+
+</div>
+
+<div class="gradient-box p-10 md:p-16">
+
+<div class="absolute top-0 right-0 w-72 h-72 bg-green-300 opacity-20 rounded-full blur-3xl"></div>
+
+<div class="relative z-10 text-center">
+
+<img src="about.webp" class="w-80 mx-auto object-contain float">
+
+<h2 class="text-4xl font-bold mt-10 mb-4">
+Natural Ayurvedic Support
+</h2>
+
+<p class="text-green-100 text-lg leading-relaxed">
+Crafted with powerful Ayurvedic herbs to support healthy sugar balance, immunity and overall wellness naturally.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INTERACTIVE INGREDIENTS SECTION -->
+<section class="py-24 relative overflow-hidden">
+
+<div class="absolute top-0 left-0 w-96 h-96 bg-green-200 opacity-20 rounded-full blur-3xl"></div>
+
+<div class="max-w-7xl mx-auto px-4 relative z-10">
+
+<div class="text-center mb-16">
+
+<span class="badge">
+🌿 18 POWERFUL AYURVEDIC HERBS
+</span>
+
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+What's Inside Diacare?
+</h2>
+
+<p class="text-gray-600 text-lg max-w-3xl mx-auto">
+A premium blend of carefully selected Ayurvedic herbs crafted to support natural wellness and healthy living.
+</p>
+
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🥒</div>
+<h3 class="font-bold text-lg">Karela</h3>
+<p class="text-sm mt-2 opacity-70">Blood Sugar Support</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🫐</div>
+<h3 class="font-bold text-lg">Jamun</h3>
+<p class="text-sm mt-2 opacity-70">Healthy Glucose Balance</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🌿</div>
+<h3 class="font-bold text-lg">Ashwagandha</h3>
+<p class="text-sm mt-2 opacity-70">Stress Support</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🍃</div>
+<h3 class="font-bold text-lg">Tulsi</h3>
+<p class="text-sm mt-2 opacity-70">Immunity Support</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🍏</div>
+<h3 class="font-bold text-lg">Amla</h3>
+<p class="text-sm mt-2 opacity-70">Rich In Antioxidants</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🌱</div>
+<h3 class="font-bold text-lg">Giloy</h3>
+<p class="text-sm mt-2 opacity-70">Detoxification</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🌾</div>
+<h3 class="font-bold text-lg">Methi</h3>
+<p class="text-sm mt-2 opacity-70">Digestive Wellness</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">💚</div>
+<h3 class="font-bold text-lg">Gurmar</h3>
+<p class="text-sm mt-2 opacity-70">Sugar Wellness</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">🌳</div>
+<h3 class="font-bold text-lg">Vijaysar</h3>
+<p class="text-sm mt-2 opacity-70">Traditional Ayurvedic Herb</p>
+</div>
+
+<div class="premium-card p-6 text-center cursor-pointer hover:bg-green-900 hover:text-white group">
+<div class="text-5xl mb-4">✨</div>
+<h3 class="font-bold text-lg">+ More Herbs</h3>
+<p class="text-sm mt-2 opacity-70">18 Total Ingredients</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits" class="py-24">
+
+<div class="max-w-7xl mx-auto px-4">
+
+<div class="text-center mb-16">
+
+<span class="badge">
+💚 HEALTH BENEFITS
+</span>
+
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+Benefits Of Diacare Powder
+</h2>
+
+<p class="text-gray-600 text-lg max-w-3xl mx-auto">
+Powerful Ayurvedic ingredients crafted to support wellness naturally.
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div class="premium-card p-8">
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Stimulates Insulin Production
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Encourages the pancreas to naturally produce insulin, helping regulate blood sugar effectively.
+</p>
+</div>
+
+<div class="premium-card p-8">
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Skin Health Support
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Promotes healthy glowing skin while supporting detoxification naturally.
+</p>
+</div>
+
+<div class="premium-card p-8">
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Body Detoxification
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Supports cleansing and purification for better health and vitality.
+</p>
+</div>
+
+<div class="premium-card p-8">
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Digestive Wellness
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Improves digestion and supports gut health naturally with herbal ingredients.
+</p>
+</div>
+
+<div class="premium-card p-8">
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Healthy Sugar Support
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Helps maintain balanced sugar levels naturally and supports wellness management.
+</p>
+</div>
+
+<div class="premium-card p-8">
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Immunity Booster
+</h3>
+<p class="text-gray-600 leading-relaxed">
+Strengthens immunity and helps the body stay healthy and active.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BLOOD PRESSURE -->
+<section class="py-24 bg-gradient-to-b from-green-50 to-white">
+
+<div class="max-w-7xl mx-auto px-4">
+
+<div class="text-center mb-16">
+
+<span class="badge">
+❤️ HEART WELLNESS SUPPORT
+</span>
+
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+Supports Healthy Blood Pressure
+</h2>
+
+<p class="text-gray-600 text-lg max-w-3xl mx-auto">
+Ayurvedic herbs that naturally support heart health and circulation.
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<div class="premium-card p-8">
+<div class="text-5xl mb-6">🩸</div>
+<h3 class="text-2xl font-bold text-green-900 mb-4">Improves Circulation</h3>
+<p class="text-gray-600">
+Enhances blood flow and supports optimal circulation naturally.
+</p>
+</div>
+
+<div class="premium-card p-8">
+<div class="text-5xl mb-6">🧘</div>
+<h3 class="text-2xl font-bold text-green-900 mb-4">Reduces Stress</h3>
+<p class="text-gray-600">
+Contains herbs like Ashwagandha to support stress management and relaxation.
+</p>
+</div>
+
+<div class="premium-card p-8">
+<div class="text-5xl mb-6">💚</div>
+<h3 class="text-2xl font-bold text-green-900 mb-4">Heart Health Support</h3>
+<p class="text-gray-600">
+Supports cardiovascular wellness and overall healthy living naturally.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INGREDIENTS -->
+<section class="py-24">
+
+<div class="max-w-7xl mx-auto px-4">
+
+<div class="text-center mb-16">
+
+<span class="badge">
+🌿 POWERFUL AYURVEDIC HERBS
+</span>
+
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+Ingredients & Certifications
+</h2>
+
+<p class="text-gray-600 text-lg max-w-3xl mx-auto">
+Premium natural ingredients crafted for Ayurvedic wellness support.
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+<div class="premium-card p-10">
+
+<h3 class="text-3xl font-bold text-green-900 mb-8">
+Ayurvedic Ingredients
+</h3>
+
+<div class="grid grid-cols-2 gap-4 text-gray-700">
+
+<div>🌿 Karela / करेला</div>
+<div>🌿 Jamun / जामुन</div>
+<div>🌿 Ashwagandha</div>
+<div>🌿 Tulsi / तुलसी</div>
+<div>🌿 Amla / आंवला</div>
+<div>🌿 Gurmar / गुरमार</div>
+<div>🌿 Methi / मेथी</div>
+<div>🌿 Giloy / गिलोय</div>
+<div>🌿 Jamun Seed</div>
+<div>🌿 Vijaysar</div>
+<div>🌿 Licorice</div>
+<div>🌿 Punarnava</div>
+<div>🌿 Chirata</div>
+<div>🌿 Barberry</div>
+<div>🌿 Panne Phool</div>
+
+</div>
+
+</div>
+
+<div class="gradient-box p-10">
+
+<div class="absolute top-0 right-0 w-72 h-72 bg-green-300 opacity-20 rounded-full blur-3xl"></div>
+
+<div class="relative z-10">
+
+<h3 class="text-3xl font-bold mb-8">
+Certified Quality
+</h3>
+
+<div class="space-y-5">
+
+<div class="bg-white/10 rounded-2xl p-5">
+✅ HACCP Certified
+</div>
+
+<div class="bg-white/10 rounded-2xl p-5">
+✅ GMP Certified
+</div>
+
+<div class="bg-white/10 rounded-2xl p-5">
+✅ ISO 9001:2015 Certified
+</div>
+
+</div>
+
+<div class="mt-10">
+
+<h4 class="text-2xl font-bold mb-4">
+Why Choose Diacare?
+</h4>
+
+<p class="text-green-100 leading-relaxed">
+A carefully crafted Ayurvedic formulation made with trusted herbs to support natural wellness and healthy living.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-green-900 text-white mt-20">
+
+<div class="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+<div>
+<img src="logo.webp" class="w-20 h-20 mb-5 rounded-full object-cover">
+<p class="text-green-200 leading-relaxed">
+ShreeJee Ayucare — Delivering authentic Ayurvedic wellness solutions for healthier living.
+</p>
+</div>
+
+<div>
+<h4 class="font-bold text-xl mb-5">Company</h4>
+<div class="space-y-3">
+<a href="index.html" class="block hover:text-green-300">Home</a>
+<a href="med_details.html" class="block hover:text-green-300">Product Details</a>
+<a href="#" class="block hover:text-green-300">Contact</a>
+</div>
+</div>
+
+<div>
+<h4 class="font-bold text-xl mb-5">Policies</h4>
+<div class="space-y-3">
+<a href="#" class="block hover:text-green-300">Privacy Policy</a>
+<a href="#" class="block hover:text-green-300">Refund Policy</a>
+<a href="#" class="block hover:text-green-300">Terms & Conditions</a>
+</div>
+</div>
+
+<div>
+<h4 class="font-bold text-xl mb-5">Get In Touch</h4>
+
+<p class="mb-4">
+📧 shreejeeayucare@gmail.com
+</p>
+
+<div class="flex gap-4 text-2xl">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-youtube"></i>
+</div>
+
+</div>
+
+</div>
+
+<div class="bg-green-800 text-center py-5 text-green-200 text-sm">
+© 2025 ShreeJee Ayucare. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>

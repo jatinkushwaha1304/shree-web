@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | ShreeJee Ayucare</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+body{
+background: linear-gradient(to bottom,#f0fdf4,#ffffff);
+font-family: 'Inter', sans-serif;
+overflow-x:hidden;
+}
+
+.glow{
+position:absolute;
+border-radius:999px;
+filter:blur(80px);
+opacity:0.25;
+z-index:0;
+}
+
+.floating{
+animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+}
+
+.premium-card{
+background:white;
+border:1px solid #dcfce7;
+border-radius:40px;
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
+overflow:hidden;
+position:relative;
+}
+
+.feature-card{
+background:white;
+border-radius:30px;
+padding:32px;
+border:1px solid #dcfce7;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:0.35s ease;
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+}
+
+.gradient-box{
+background: linear-gradient(135deg,#14532d,#166534,#15803d);
+border-radius:32px;
+color:white;
+position:relative;
+overflow:hidden;
+}
+
+.badge{
+display:inline-block;
+background:#dcfce7;
+color:#14532d;
+padding:10px 18px;
+border-radius:999px;
+font-weight:700;
+font-size:13px;
+letter-spacing:0.5px;
+}
+
+.cta-btn{
+display:inline-block;
+background:#14532d;
+color:white;
+padding:16px 32px;
+border-radius:18px;
+font-weight:700;
+transition:0.3s ease;
+}
+
+.cta-btn:hover{
+transform:translateY(-3px) scale(1.02);
+background:#166534;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="glow bg-green-300 w-96 h-96 top-0 left-0"></div>
+<div class="glow bg-green-200 w-[500px] h-[500px] bottom-0 right-0"></div>
+
+<!-- Navbar -->
+<nav class="bg-green-900 text-white sticky top-0 z-50 shadow-xl">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<img src="logo.webp" class="w-12 h-12 rounded-full object-cover">
+<div>
+<h2 class="font-bold text-xl">ShreeJee Ayucare</h2>
+<p class="text-xs text-green-200">Premium Ayurvedic Wellness</p>
+</div>
+</div>
+
+<a href="index.html" class="bg-white/10 hover:bg-white/20 px-5 py-2 rounded-xl transition">
+← Back To Home
+</a>
+</div>
+</nav>
+
+<!-- Thank You Hero -->
+<section class="relative py-24 overflow-hidden">
+
+<div class="max-w-6xl mx-auto px-4 relative z-10">
+
+<div class="premium-card grid grid-cols-1 lg:grid-cols-2 items-center">
+
+<!-- LEFT -->
+<div class="p-10 md:p-16">
+
+<span class="badge">
+✅ FORM SUBMITTED SUCCESSFULLY
+</span>
+
+<h1 class="text-5xl md:text-6xl font-extrabold text-green-900 mt-8 leading-tight">
+Thank You <br>
+For Connecting <br>
+With Us
+</h1>
+
+<p class="text-gray-600 text-xl leading-relaxed mt-8 mb-8">
+Our wellness support team has received your details and will contact you shortly.
+</p>
+
+<div class="space-y-4 mb-10">
+
+<div class="flex items-center gap-4 bg-green-50 rounded-2xl p-4">
+<div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">
+📞
+</div>
+<div>
+<h4 class="font-bold text-green-900">Expert Consultation</h4>
+<p class="text-gray-600 text-sm">Our Ayurvedic expert will call you shortly.</p>
+</div>
+</div>
+
+<div class="flex items-center gap-4 bg-green-50 rounded-2xl p-4">
+<div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">
+🌿
+</div>
+<div>
+<h4 class="font-bold text-green-900">Natural Wellness</h4>
+<p class="text-gray-600 text-sm">Personalized Ayurvedic wellness support.</p>
+</div>
+</div>
+
+</div>
+
+<a href="index.html" class="cta-btn">
+Explore More Products
+</a>
+
+</div>
+
+<!-- RIGHT -->
+<div class="gradient-box p-10 md:p-16 h-full flex flex-col justify-center">
+
+<div class="absolute top-0 right-0 w-72 h-72 bg-green-300 opacity-20 rounded-full blur-3xl"></div>
+
+<div class="relative z-10 text-center">
+
+<img src="about.webp" class="w-64 mx-auto floating mb-8 object-contain">
+
+<h2 class="text-4xl font-bold mb-5">
+Your Wellness Journey Starts Here
+</h2>
+
+<p class="text-green-100 text-lg leading-relaxed">
+Thank you for trusting ShreeJee Ayucare and Diacare for your Ayurvedic wellness journey.
+</p>
+
+<div class="grid grid-cols-2 gap-4 mt-10">
+
+<div class="bg-white/10 rounded-2xl p-5">
+<h3 class="text-3xl font-bold">25K+</h3>
+<p class="text-green-100 text-sm mt-2">Happy Customers</p>
+</div>
+
+<div class="bg-white/10 rounded-2xl p-5">
+<h3 class="text-3xl font-bold">100%</h3>
+<p class="text-green-100 text-sm mt-2">Ayurvedic Herbs</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Benefits -->
+<section class="py-20">
+
+<div class="max-w-7xl mx-auto px-4">
+
+<div class="text-center mb-16">
+
+<span class="badge">
+🌿 DIACARE BENEFITS
+</span>
+
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+Why Customers Trust Diacare
+</h2>
+
+<p class="text-gray-600 text-lg max-w-3xl mx-auto">
+Premium Ayurvedic wellness support crafted with natural herbs and trusted ingredients.
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<div class="feature-card">
+<div class="w-20 h-20 rounded-3xl bg-green-100 flex items-center justify-center text-4xl mb-6">
+💚
+</div>
+
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Healthy Sugar Support
+</h3>
+
+<p class="text-gray-600 leading-relaxed">
+Helps maintain balanced sugar levels naturally with Ayurvedic herbal support.
+</p>
+</div>
+
+<div class="feature-card">
+<div class="w-20 h-20 rounded-3xl bg-green-100 flex items-center justify-center text-4xl mb-6">
+✨
+</div>
+
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Body Detoxification
+</h3>
+
+<p class="text-gray-600 leading-relaxed">
+Supports cleansing and purification for better overall wellness and vitality.
+</p>
+</div>
+
+<div class="feature-card">
+<div class="w-20 h-20 rounded-3xl bg-green-100 flex items-center justify-center text-4xl mb-6">
+🛡
+</div>
+
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Natural Immunity Boost
+</h3>
+
+<p class="text-gray-600 leading-relaxed">
+Ayurvedic herbs help strengthen immunity and support healthy living.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer class="bg-green-900 text-white mt-20">
+
+<div class="max-w-7xl mx-auto px-4 py-12 text-center">
+
+<img src="logo.webp" class="w-20 h-20 mx-auto mb-5 rounded-full object-cover">
+
+<h3 class="text-3xl font-bold mb-4">
+ShreeJee Ayucare
+</h3>
+
+<p class="text-green-200 max-w-2xl mx-auto mb-6">
+Delivering authentic Ayurvedic wellness solutions crafted with natural herbs and trusted ingredients.
+</p>
+
+<div class="flex justify-center gap-4 flex-wrap">
+
+<div class="bg-white/10 px-5 py-3 rounded-2xl">
+🌿 Ayurvedic Wellness
+</div>
+
+<div class="bg-white/10 px-5 py-3 rounded-2xl">
+✅ Trusted By Thousands
+</div>
+
+<div class="bg-white/10 px-5 py-3 rounded-2xl">
+📞 Expert Guidance
+</div>
+
+</div>
+
+<div class="border-t border-white/10 mt-10 pt-6 text-green-200 text-sm">
+© 2025 ShreeJee Ayucare. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>

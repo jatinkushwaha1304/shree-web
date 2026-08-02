@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed | ShreeJee Ayucare</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(to bottom,#f0fdf4,#ffffff);
+overflow-x:hidden;
+}
+
+.glow{
+position:absolute;
+border-radius:999px;
+filter:blur(90px);
+opacity:0.2;
+z-index:0;
+}
+
+.premium-card{
+background:white;
+border-radius:40px;
+border:1px solid #dcfce7;
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
+overflow:hidden;
+position:relative;
+}
+
+.gradient-box{
+background:linear-gradient(135deg,#14532d,#166534,#15803d);
+border-radius:36px;
+position:relative;
+overflow:hidden;
+color:white;
+}
+
+.badge{
+display:inline-block;
+background:#dcfce7;
+color:#14532d;
+padding:10px 18px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+letter-spacing:0.5px;
+}
+
+.feature-card{
+background:white;
+border-radius:30px;
+padding:32px;
+border:1px solid #dcfce7;
+box-shadow:0 12px 35px rgba(0,0,0,0.06);
+transition:0.35s ease;
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+}
+
+.cta-btn{
+display:inline-block;
+background:#14532d;
+color:white;
+padding:16px 32px;
+border-radius:18px;
+font-weight:700;
+transition:0.3s ease;
+}
+
+.cta-btn:hover{
+transform:translateY(-3px) scale(1.02);
+background:#166534;
+}
+
+.float{
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="glow bg-green-300 w-96 h-96 top-0 left-0"></div>
+<div class="glow bg-green-200 w-[500px] h-[500px] bottom-0 right-0"></div>
+
+<!-- NAVBAR -->
+<nav class="bg-green-900 text-white shadow-xl sticky top-0 z-50">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+<div class="flex items-center gap-3">
+
+<img src="logo.webp" class="w-12 h-12 rounded-full object-cover">
+
+<div>
+<h2 class="text-xl font-bold">ShreeJee Ayucare</h2>
+<p class="text-xs text-green-200">Premium Ayurvedic Wellness</p>
+</div>
+
+</div>
+
+<a href="index.html" class="bg-white/10 hover:bg-white/20 transition px-5 py-2 rounded-xl">
+← Home
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section class="relative py-24 overflow-hidden">
+
+<div class="max-w-6xl mx-auto px-4 relative z-10">
+
+<div class="premium-card grid grid-cols-1 lg:grid-cols-2 items-center">
+
+<!-- LEFT -->
+<div class="p-10 md:p-16">
+
+<span class="badge">
+✅ ORDER SUCCESSFULLY CONFIRMED
+</span>
+
+<h1 class="text-5xl md:text-6xl font-extrabold text-green-900 leading-tight mt-8">
+Thank You <br>
+For Your Order
+</h1>
+
+<p class="text-gray-600 text-xl leading-relaxed mt-8 mb-5">
+Your order has been placed successfully and our team will contact you shortly.
+</p>
+
+<p class="text-lg text-green-800 font-medium mb-10">
+आपका ऑर्डर सफलतापूर्वक किया गया है। हमारी टीम शीघ्र ही आपसे संपर्क करेगी।
+</p>
+
+<div class="space-y-4 mb-10">
+
+<div class="flex items-center gap-4 bg-green-50 rounded-2xl p-4">
+
+<div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">
+📦
+</div>
+
+<div>
+<h4 class="font-bold text-green-900">Order Processing Started</h4>
+<p class="text-sm text-gray-600">Your order is now being prepared for dispatch.</p>
+</div>
+
+</div>
+
+<div class="flex items-center gap-4 bg-green-50 rounded-2xl p-4">
+
+<div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">
+🚚
+</div>
+
+<div>
+<h4 class="font-bold text-green-900">Fast & Safe Delivery</h4>
+<p class="text-sm text-gray-600">Timely delivery with secure packaging across India.</p>
+</div>
+
+</div>
+
+</div>
+
+<a href="index.html" class="cta-btn">
+Continue Shopping
+</a>
+
+</div>
+
+<!-- RIGHT -->
+<div class="gradient-box p-10 md:p-16 h-full flex flex-col justify-center">
+
+<div class="absolute top-0 right-0 w-72 h-72 bg-green-300 opacity-20 rounded-full blur-3xl"></div>
+
+<div class="relative z-10 text-center">
+
+<img src="about.webp" class="w-72 mx-auto object-contain float mb-8">
+
+<h2 class="text-4xl font-bold mb-5">
+Your Wellness Order Is On The Way
+</h2>
+
+<p class="text-green-100 text-lg leading-relaxed">
+Thank you for trusting ShreeJee Ayucare and Diacare for your Ayurvedic wellness journey.
+</p>
+
+<div class="grid grid-cols-2 gap-4 mt-10">
+
+<div class="bg-white/10 rounded-2xl p-5">
+<h3 class="text-3xl font-bold">25K+</h3>
+<p class="text-green-100 text-sm mt-2">Happy Customers</p>
+</div>
+
+<div class="bg-white/10 rounded-2xl p-5">
+<h3 class="text-3xl font-bold">100%</h3>
+<p class="text-green-100 text-sm mt-2">Ayurvedic Herbs</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="py-20">
+
+<div class="max-w-7xl mx-auto px-4">
+
+<div class="text-center mb-16">
+
+<span class="badge">
+🌿 WHY CUSTOMERS TRUST US
+</span>
+
+<h2 class="text-5xl font-bold text-green-900 mt-6 mb-5">
+Premium Ayurvedic Wellness
+</h2>
+
+<p class="text-gray-600 text-lg max-w-3xl mx-auto">
+Authentic Ayurvedic wellness products crafted with trusted ingredients and premium care.
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<div class="feature-card">
+
+<div class="w-20 h-20 rounded-3xl bg-green-100 flex items-center justify-center text-4xl mb-6">
+🌿
+</div>
+
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Trusted Quality
+</h3>
+
+<p class="text-gray-600 leading-relaxed">
+Made using authentic Ayurvedic ingredients with trusted quality standards.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="w-20 h-20 rounded-3xl bg-green-100 flex items-center justify-center text-4xl mb-6">
+🚚
+</div>
+
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Fast Delivery
+</h3>
+
+<p class="text-gray-600 leading-relaxed">
+Safe doorstep delivery with secure packaging across India.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="w-20 h-20 rounded-3xl bg-green-100 flex items-center justify-center text-4xl mb-6">
+📞
+</div>
+
+<h3 class="text-2xl font-bold text-green-900 mb-4">
+Customer Support
+</h3>
+
+<p class="text-gray-600 leading-relaxed">
+Our support team is always available for order updates and guidance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-green-900 text-white mt-20">
+
+<div class="max-w-7xl mx-auto px-4 py-14 text-center">
+
+<img src="logo.webp" class="w-20 h-20 mx-auto mb-5 rounded-full object-cover">
+
+<h3 class="text-3xl font-bold mb-4">
+ShreeJee Ayucare
+</h3>
+
+<p class="text-green-200 max-w-2xl mx-auto mb-6">
+Delivering authentic Ayurvedic wellness solutions crafted with trusted natural herbs.
+</p>
+
+<div class="flex justify-center gap-4 flex-wrap">
+
+<div class="bg-white/10 px-5 py-3 rounded-2xl">
+🌿 Ayurvedic Wellness
+</div>
+
+<div class="bg-white/10 px-5 py-3 rounded-2xl">
+✅ Trusted By Thousands
+</div>
+
+<div class="bg-white/10 px-5 py-3 rounded-2xl">
+🚚 Fast Delivery
+</div>
+
+</div>
+
+<div class="border-t border-white/10 mt-10 pt-6 text-green-200 text-sm">
+© 2025 ShreeJee Ayucare. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
