@@ -1,0 +1,9 @@
+{
+  "name": "shreejee-ayucare-razorpay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Razorpay Standard Checkout integration for ShreeJee Ayucare",
+  "dependencies": {
+    "razorpay": "^2.9.6"
+  }
+}

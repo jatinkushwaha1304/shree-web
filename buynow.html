@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Now - ShreeJee Ayucare</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body class="bg-gray-50">
 
@@ -93,8 +94,8 @@
 
         <div class="space-y-3">
           <label class="flex items-center border p-3 rounded-md cursor-pointer">
-            <input type="radio" name="payment" value="cashfree" class="mr-3">
-            <span>Cashfree Payments (UPI, Cards, Wallets, NetBanking)</span>
+            <input type="radio" name="payment" value="razorpay" class="mr-3">
+            <span>Razorpay (UPI, Cards, Wallets, NetBanking)</span>
           </label>
           <label class="flex items-center border p-3 rounded-md cursor-pointer bg-yellow-100">
             <input type="radio" name="payment" value="cod" checked class="mr-3">
@@ -262,17 +263,7 @@
       updateSummary();
     });
 
-    // Cashfree disable
-    const cashfreeRadio = document.querySelector('input[value="cashfree"]');
-    const codRadio = document.querySelector('input[value="cod"]');
-    cashfreeRadio.addEventListener("change", function () {
-      alert("❌ This service is not available at the moment, please choose COD.");
-      codRadio.checked = true;
-      cashfreeRadio.checked = false;
-    });
-
-    // Save order
-    document.getElementById("order-btn").addEventListener("click", function () {
+    async function saveOrder(paymentMethod, paymentDetails = {}) {
       const firstName = document.getElementById("firstName").value.trim();
       const lastName = document.getElementById("lastName").value.trim();
       const address = document.getElementById("address").value.trim();
@@ -286,6 +277,119 @@
       const tax = subtotal * 0.1183;
       const totalPrice = subtotal - discountValue;
 
+      const orderData = {
+        firstName, lastName, address, apartment, city, state, pincode, phone, altPhone,
+        quantity,
+        discount: discountValue,
+        promoCode: appliedCode,
+        subtotal,
+        tax: tax.toFixed(2),
+        total: totalPrice,
+        payment: paymentMethod,
+        timestamp: Date.now(),
+        ...paymentDetails
+      };
+
+      await db.ref("orders").push(orderData);
+      window.location.href = "order-success.html";
+    }
+
+    async function createRazorpayOrder() {
+      const response = await fetch("/.netlify/functions/create-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          quantity,
+          promoCode: appliedCode
+        })
+      });
+
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(data.error || "Unable to create payment order.");
+      }
+      return data;
+    }
+
+    async function verifyRazorpayPayment(paymentResponse) {
+      const response = await fetch("/.netlify/functions/verify-payment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(paymentResponse)
+      });
+
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || "Payment verification failed.");
+      }
+      return data;
+    }
+
+    async function startRazorpayCheckout() {
+      const order = await createRazorpayOrder();
+
+      const options = {
+        key: order.key_id,
+        amount: order.amount,
+        currency: order.currency,
+        name: "ShreeJee Ayucare",
+        description: "Diacare Powder - 300G",
+        order_id: order.order_id,
+        prefill: {
+          name: `${document.getElementById("firstName").value.trim()} ${document.getElementById("lastName").value.trim()}`.trim(),
+          contact: document.getElementById("phone").value.trim()
+        },
+        notes: {
+          product: "Diacare Powder - 300G",
+          quantity: String(quantity),
+          promoCode: appliedCode || "NONE"
+        },
+        theme: {
+          color: "#14532d"
+        },
+        handler: async function (response) {
+          try {
+            await verifyRazorpayPayment(response);
+
+            await saveOrder("Razorpay", {
+              paymentStatus: "Paid",
+              razorpayOrderId: response.razorpay_order_id,
+              razorpayPaymentId: response.razorpay_payment_id
+            });
+          } catch (error) {
+            console.error("❌ Razorpay verification error:", error);
+            alert("⚠️ Payment was received, but verification could not be completed. Please contact support before trying again.");
+          }
+        },
+        modal: {
+          ondismiss: function () {
+            console.log("Razorpay checkout dismissed by customer.");
+          }
+        }
+      };
+
+      const razorpay = new Razorpay(options);
+      razorpay.on("payment.failed", function (response) {
+        const description = response?.error?.description || "Payment failed.";
+        console.error("❌ Razorpay payment failed:", response);
+        alert(`❌ Payment failed: ${description}`);
+      });
+      razorpay.open();
+    }
+
+    // Payment selection
+    const razorpayRadio = document.querySelector('input[value="razorpay"]');
+    const codRadio = document.querySelector('input[value="cod"]');
+
+    document.getElementById("order-btn").addEventListener("click", async function () {
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const state = document.getElementById("state").value.trim();
+      const pincode = document.getElementById("pincode").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+
       if (!firstName || !lastName || !address || !city || !state || !pincode || !phone) {
         alert("⚠️ Please fill all mandatory fields.");
         return;
@@ -296,24 +400,26 @@
         return;
       }
 
-      db.ref("orders").push({
-        firstName, lastName, address,apartment, city, state, pincode, phone, altPhone,
-        quantity,
-        discount: discountValue,
-        promoCode: appliedCode,
-        subtotal,
-        tax: tax.toFixed(2),
-        total: totalPrice,
-        payment: "COD",
-        timestamp: Date.now()
-      })
-      .then(() => {
-        window.location.href = "order-success.html";
-      })
-      .catch(err => {
-        console.error("❌ Firebase error:", err);
-        alert("⚠️ Error saving order: " + err.message);
-      });
+      const button = this;
+      button.disabled = true;
+      const originalText = button.textContent;
+      button.textContent = "Processing...";
+
+      try {
+        if (razorpayRadio.checked) {
+          await startRazorpayCheckout();
+        } else if (codRadio.checked) {
+          await saveOrder("COD");
+        } else {
+          alert("⚠️ Please select a payment method.");
+        }
+      } catch (error) {
+        console.error("❌ Order/payment error:", error);
+        alert(`⚠️ ${error.message || "Something went wrong. Please try again."}`);
+      } finally {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
     });
 
     // Initial load
