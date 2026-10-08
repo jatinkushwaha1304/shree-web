@@ -93,11 +93,15 @@
         <p class="text-sm text-gray-500 mb-4">All transactions are secure and encrypted.</p>
 
         <div class="space-y-3">
-          <label class="flex items-center border p-3 rounded-md cursor-pointer">
+          <label id="razorpay-option" class="flex items-center border p-3 rounded-md cursor-pointer">
             <input type="radio" name="payment" value="razorpay" class="mr-3">
-            <span>Razorpay (UPI, Cards, Wallets, NetBanking)</span>
+            <span>
+              <span class="font-medium">Razorpay</span>
+              <span class="text-sm text-gray-600">(UPI, Cards, Wallets, NetBanking)</span>
+              <span class="block text-green-700 text-sm font-semibold mt-1">🎁 ₹100 OFF on prepaid payment</span>
+            </span>
           </label>
-          <label class="flex items-center border p-3 rounded-md cursor-pointer bg-yellow-100">
+          <label id="cod-option" class="flex items-center border p-3 rounded-md cursor-pointer bg-yellow-100">
             <input type="radio" name="payment" value="cod" checked class="mr-3">
             <span>Cash on Delivery (COD)</span>
           </label>
@@ -161,6 +165,29 @@
 
   </div>
 
+
+  <!-- Payment retry modal -->
+  <div id="paymentRetryModal" class="hidden fixed inset-0 z-[100] bg-black/50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 text-center">
+      <div class="mx-auto mb-4 w-14 h-14 rounded-full bg-red-100 flex items-center justify-center text-2xl">⚠️</div>
+      <h3 id="paymentRetryTitle" class="text-xl font-bold text-gray-900">Payment not completed</h3>
+      <p id="paymentRetryMessage" class="text-gray-600 mt-2">
+        Your order has not been placed yet. You can retry the online payment or choose Cash on Delivery.
+      </p>
+      <div class="mt-6 space-y-3">
+        <button id="retryPaymentBtn" type="button" class="w-full bg-green-900 text-white py-3 rounded-md font-semibold hover:bg-green-800">
+          Retry Payment — Get ₹100 OFF
+        </button>
+        <button id="continueCodBtn" type="button" class="w-full border border-gray-300 text-gray-700 py-3 rounded-md font-semibold hover:bg-gray-50">
+          Continue with Cash on Delivery
+        </button>
+        <button id="closePaymentRetryBtn" type="button" class="text-sm text-gray-500 hover:text-gray-700">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
@@ -210,6 +237,7 @@
     });
 
     const pricePerUnit = 1500;
+    const prepaidDiscount = 100;
     let quantity = 1;
     let discountValue = 0;
     let appliedCode = "";
@@ -222,14 +250,34 @@
       "RITU100" : 100
     };
 
+    function isPrepaidSelected() {
+      return document.querySelector('input[name="payment"]:checked')?.value === "razorpay";
+    }
+
+    function getEffectiveDiscount() {
+      return discountValue + (isPrepaidSelected() ? prepaidDiscount : 0);
+    }
+
     function updateSummary() {
       const subtotal = pricePerUnit * quantity;
-      const tax = subtotal * 0.075; // 18% approx tax calculation (adjust as needed)
-      const total = subtotal - discountValue;
+      const effectiveDiscount = getEffectiveDiscount();
+      const tax = subtotal * 0.075;
+      const total = Math.max(0, subtotal - effectiveDiscount);
+
       document.getElementById("subtotal").textContent = `₹${subtotal.toFixed(2)}`;
-      document.getElementById("discount").textContent = `₹${discountValue.toFixed(2)}`;
+      document.getElementById("discount").textContent = `₹${effectiveDiscount.toFixed(2)}`;
       document.getElementById("tax").textContent = `₹${tax.toFixed(2)}`;
       document.getElementById("total").textContent = `INR ₹${total.toFixed(2)}`;
+
+      const discountMessage = document.getElementById("discountMessage");
+      if (isPrepaidSelected()) {
+        const couponPart = discountValue > 0 ? ` + ₹${discountValue} coupon` : "";
+        discountMessage.textContent = `🎁 ₹100 prepaid discount applied${couponPart}.`;
+        discountMessage.className = "text-green-600 text-sm mb-4";
+      } else if (appliedCode) {
+        discountMessage.textContent = `🎉 You saved ₹${discountValue} with code ${appliedCode}.`;
+        discountMessage.className = "text-green-600 text-sm mb-4";
+      }
     }
 
     // Quantity buttons
@@ -275,12 +323,15 @@
       const altPhone = document.getElementById("altPhone").value.trim();
       const subtotal = pricePerUnit * quantity;
       const tax = subtotal * 0.1183;
-      const totalPrice = subtotal - discountValue;
+      const effectiveDiscount = discountValue + (paymentMethod === "Razorpay" ? prepaidDiscount : 0);
+      const totalPrice = Math.max(0, subtotal - effectiveDiscount);
 
       const orderData = {
         firstName, lastName, address, apartment, city, state, pincode, phone, altPhone,
         quantity,
-        discount: discountValue,
+        discount: effectiveDiscount,
+        couponDiscount: discountValue,
+        prepaidDiscount: paymentMethod === "Razorpay" ? prepaidDiscount : 0,
         promoCode: appliedCode,
         subtotal,
         tax: tax.toFixed(2),
@@ -300,7 +351,8 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           quantity,
-          promoCode: appliedCode
+          promoCode: appliedCode,
+          paymentMethod: "razorpay"
         })
       });
 
@@ -324,6 +376,50 @@
       }
       return data;
     }
+
+    const paymentRetryModal = document.getElementById("paymentRetryModal");
+    const paymentRetryTitle = document.getElementById("paymentRetryTitle");
+    const paymentRetryMessage = document.getElementById("paymentRetryMessage");
+    const retryPaymentBtn = document.getElementById("retryPaymentBtn");
+    const continueCodBtn = document.getElementById("continueCodBtn");
+    const closePaymentRetryBtn = document.getElementById("closePaymentRetryBtn");
+
+    function showPaymentRetry(reason = "cancelled") {
+      paymentRetryModal.classList.remove("hidden");
+      if (reason === "failed") {
+        paymentRetryTitle.textContent = "Payment failed";
+        paymentRetryMessage.textContent = "Your order has not been placed. You can retry the online payment and still get ₹100 OFF, or switch to Cash on Delivery.";
+      } else {
+        paymentRetryTitle.textContent = "Payment cancelled";
+        paymentRetryMessage.textContent = "No payment was completed and your order has not been placed. You can change your mind and retry the online payment with ₹100 OFF, or choose Cash on Delivery.";
+      }
+    }
+
+    function hidePaymentRetry() {
+      paymentRetryModal.classList.add("hidden");
+    }
+
+    retryPaymentBtn.addEventListener("click", async () => {
+      hidePaymentRetry();
+      razorpayRadio.checked = true;
+      codRadio.checked = false;
+      updatePaymentSelection();
+      try {
+        await startRazorpayCheckout();
+      } catch (error) {
+        console.error("❌ Retry payment error:", error);
+        alert(`⚠️ ${error.message || "Unable to start payment. Please try again."}`);
+      }
+    });
+
+    continueCodBtn.addEventListener("click", () => {
+      hidePaymentRetry();
+      razorpayRadio.checked = false;
+      codRadio.checked = true;
+      updatePaymentSelection();
+    });
+
+    closePaymentRetryBtn.addEventListener("click", hidePaymentRetry);
 
     async function startRazorpayCheckout() {
       const order = await createRazorpayOrder();
@@ -364,6 +460,7 @@
         modal: {
           ondismiss: function () {
             console.log("Razorpay checkout dismissed by customer.");
+            showPaymentRetry("cancelled");
           }
         }
       };
@@ -372,7 +469,7 @@
       razorpay.on("payment.failed", function (response) {
         const description = response?.error?.description || "Payment failed.";
         console.error("❌ Razorpay payment failed:", response);
-        alert(`❌ Payment failed: ${description}`);
+        showPaymentRetry("failed");
       });
       razorpay.open();
     }
@@ -380,6 +477,20 @@
     // Payment selection
     const razorpayRadio = document.querySelector('input[value="razorpay"]');
     const codRadio = document.querySelector('input[value="cod"]');
+    const razorpayOption = document.getElementById("razorpay-option");
+    const codOption = document.getElementById("cod-option");
+
+    function updatePaymentSelection() {
+      razorpayOption.classList.toggle("bg-green-50", razorpayRadio.checked);
+      razorpayOption.classList.toggle("border-green-600", razorpayRadio.checked);
+      codOption.classList.toggle("bg-yellow-100", codRadio.checked);
+      codOption.classList.toggle("border-yellow-400", codRadio.checked);
+      updateSummary();
+    }
+
+    razorpayRadio.addEventListener("change", updatePaymentSelection);
+    codRadio.addEventListener("change", updatePaymentSelection);
+    updatePaymentSelection();
 
     document.getElementById("order-btn").addEventListener("click", async function () {
       const firstName = document.getElementById("firstName").value.trim();
