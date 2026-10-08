@@ -33,13 +33,15 @@ exports.handler = async (event) => {
     const body = JSON.parse(event.body || "{}");
     const quantity = Number(body.quantity);
     const promoCode = String(body.promoCode || "").trim().toUpperCase();
+    const paymentMethod = String(body.paymentMethod || "").trim().toLowerCase();
 
     if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) {
       return json(400, { error: "Invalid quantity." });
     }
 
-    const discount = DISCOUNT_CODES[promoCode] || 0;
-    const totalRupees = PRICE_PER_UNIT * quantity - discount;
+    const couponDiscount = DISCOUNT_CODES[promoCode] || 0;
+    const prepaidDiscount = paymentMethod === "razorpay" ? 100 : 0;
+    const totalRupees = PRICE_PER_UNIT * quantity - couponDiscount - prepaidDiscount;
     const amount = Math.round(totalRupees * 100);
 
     if (!Number.isInteger(amount) || amount < 100) {
@@ -59,6 +61,8 @@ exports.handler = async (event) => {
         product: "Diacare Powder - 300G",
         quantity: String(quantity),
         promoCode,
+        couponDiscount: String(couponDiscount),
+        prepaidDiscount: String(prepaidDiscount),
       },
     });
 
